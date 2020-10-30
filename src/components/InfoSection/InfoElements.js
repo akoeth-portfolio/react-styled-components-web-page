@@ -36,6 +36,12 @@ export const InfoRow = styled.div`
 export const Column1 = styled.div`
   margin-bottom: 15px;
   padding: 0 15px;
+  grid-area: col1;
+`;
+
+export const Column2 = styled.div`
+  margin-bottom: 15px;
+  padding: 0 15px;
   grid-area: col2;
 `;
 
@@ -61,7 +67,7 @@ export const Heading = styled.h1`
   font-size: 48px;
   line-height: 1.1;
   font-weight: 600;
-  color: ${({ lightText }) => (lightTexr ? "#f7f8fa" : "010606")};
+  color: ${({ lightText }) => (lightText ? "#f7f8fa" : "010606")};
 
   @media screen and (max-width: 480px) {
     font-size: 32px;
