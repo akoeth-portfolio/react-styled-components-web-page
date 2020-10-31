@@ -31,23 +31,22 @@ const InfoSection = ({
 }) => {
   return (
     <>
-      <InfoContainer lightBg={lightBg}>
+      <InfoContainer lightBg={lightBg} id={id}>
         <InfoWrapper>
           <InfoRow imgStart={imgStart}>
             <Column1>
               <TextWrapper>
                 <TopLine>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headLine}</Heading>
-                <Subtitle darkText={darkText}> {description}</Subtitle>
+                <Subtitle darkText={darkText}>{description}</Subtitle>
                 <BtnWrap>
                   <Button to="home">{buttonLabel}</Button>
                 </BtnWrap>
               </TextWrapper>
+              <Img src={img} alt={alt} />
             </Column1>
             <Column2>
-              <ImgWrap>
-                <Img scr={img} alt={alt} />
-              </ImgWrap>
+              <ImgWrap></ImgWrap>
             </Column2>
           </InfoRow>
         </InfoWrapper>
