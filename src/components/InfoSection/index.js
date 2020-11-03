@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "../ButtonElements";
 import { Subtitle } from "./InfoElements";
 
@@ -8,6 +8,7 @@ import {
   InfoRow,
   Column1,
   Column2,
+  Spinner,
   TextWrapper,
   TopLine,
   Heading,
@@ -39,6 +40,13 @@ const InfoSection = ({
   dark,
   dark2,
 }) => {
+  const [renderIframe, setRenderIframe] = useState(false);
+
+  const handleOnLoad = () => () => {
+    setRenderIframe(true);
+    console.log("onLoad");
+  };
+
   return (
     <>
       <InfoContainer lightBg={lightBg} id={id}>
@@ -74,6 +82,15 @@ const InfoSection = ({
             <Column2>
               <ImgWrap>
                 {img && <Img src={img} alt={alt} />}{" "}
+                {url && !renderIframe && (
+                  <Spinner>
+                    {" "}
+                    <i
+                      className="fa fa-cog fa-spin"
+                      style={{ fontSize: "10rem" }}
+                    />
+                  </Spinner>
+                )}
                 {url && (
                   <Iframe
                     url={url}
@@ -83,6 +100,7 @@ const InfoSection = ({
                     className="myClassname"
                     display="initial"
                     position="relative"
+                    onLoad={handleOnLoad()}
                   />
                 )}
               </ImgWrap>

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import spinner from "./spinner.gif";
 
 export const InfoContainer = styled.div`
   color: #fff;
@@ -7,18 +8,6 @@ export const InfoContainer = styled.div`
   @media screen and (max-width: 768px) {
     padding: 100px 0;
   }
-`;
-
-export const InfoWrapper = styled.div`
-  display: grid;
-  z-index: 1;
-  height: 860px;
-  width: 100%;
-  max-width: 1100px;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 0 24px;
-  justify-content: center;
 `;
 
 export const InfoRow = styled.div`
@@ -105,6 +94,8 @@ export const BtnWrap = styled.div`
 `;
 
 export const ImgWrap = styled.div`
+  position: relative;
+
   @media only screen and (min-width: 600px) {
     width: 555px;
     height: 100%;
@@ -115,4 +106,27 @@ export const Img = styled.img`
   width: 100%;
   margin: 0 0 10px 0;
   padding-right: 0;
+`;
+
+export const Spinner = styled.div`
+  width: 100%;
+  height: 450px;
+  position: absolute;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+`;
+
+export const InfoWrapper = styled.div`
+  display: grid;
+  z-index: 1;
+  height: 860px;
+  width: 100%;
+  max-width: 1100px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 24px;
+  justify-content: center;
 `;

@@ -24,7 +24,7 @@ export const homeObjTwo = {
   topLine: "Project No 1",
   headLine: "Bicycle Webshop",
   description:
-    "This example app features some of the most common functionalities that can be found in almost every modern webshop application. It has been build using the MERN tech stack.",
+    "This example app features some of the most common user facing functionalities that can be found in modern webshop applications. It has been build using the MERN tech stack.",
   teckStackHeader: "Frameworks and Libraries:",
   teckStack: "React.js, Redux, Node.js, Express, MongoDB",
   buttonLabel: "Learn More",
@@ -43,7 +43,9 @@ export const homeObjThree = {
   topLine: "Project No 2",
   headLine: "React Sliding Puzzle",
   description:
-    "Few sections rutted out but great experience for my first ride there!",
+    "This little application challenges it's user to slide each piece of the puzzle back in the correct position. Players can choose between numbers or a selection of images.",
+  teckStackHeader: "Frameworks and Libraries:",
+  teckStack: "React.js",
   buttonLabel: "Get Started",
   imgStart: false,
   url: "https://puzzle-react.herokuapp.com/",
@@ -60,7 +62,9 @@ export const homeObjFour = {
   topLine: "Project No 3",
   headLine: "Tic Tac Toe Chat",
   description:
-    "As the valley begins to close, the route transitions to a section of open forest.",
+    "A classic implementation of the good old tic tac toe principle, this application enables it's users to play against each other or just have a little chat.",
+  teckStackHeader: "Frameworks and Libraries:",
+  teckStack: "Node.js, Express, Socket io",
   buttonLabel: "Get Started",
   imgStart: true,
   url: "https://tic-tac-toe-web-s.herokuapp.com/",
@@ -77,7 +81,9 @@ export const homeObjFive = {
   topLine: "Project No 4",
   headLine: "Blockchain",
   description:
-    "As the valley begins to close, the route transitions to a section of open forest.",
+    "This app showcases some of the functionalities a blockchain has. Beeing by no means comprehensive, it nonetheless provides a tiny glimpse into the matter.",
+  teckStackHeader: "Frameworks and Libraries:",
+  teckStack: "React.js",
   buttonLabel: "Get Started",
   imgStart: true,
   url: "https://blockchain-demo-app.herokuapp.com/",
