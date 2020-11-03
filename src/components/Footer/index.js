@@ -1,23 +1,8 @@
 import React from "react";
+import { FooterContainer } from "./FooterElements";
 
 const Footer = () => {
-  return (
-    <FooterContainer>
-      <FooterWrap>
-        <FooterLinksContainer>
-          <FooterLinksWrapper>
-            <FooterLinkItems>
-              <FooterLinkTitle>
-                <FooterLink to="/about">About Me</FooterLink>
-                <FooterLink to="/projects">Projects</FooterLink>
-                <FooterLink to="/contact">Contact</FooterLink>
-              </FooterLinkTitle>
-            </FooterLinkItems>
-          </FooterLinksWrapper>
-        </FooterLinksContainer>
-      </FooterWrap>
-    </FooterContainer>
-  );
+  return <FooterContainer>visit my repository on github</FooterContainer>;
 };
 
 export default Footer;

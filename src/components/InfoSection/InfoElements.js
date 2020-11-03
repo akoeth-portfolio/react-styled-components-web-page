@@ -65,7 +65,7 @@ export const TopLine = styled.div`
 export const Heading = styled.h1`
   /* color: #000; */
   margin-bottom: 24px;
-  font-size: 48px;
+  font-size: 2rem;
   line-height: 1.1;
   font-weight: 600;
   color: ${({ lightText }) => (lightText ? "#f7f8fa" : "#000000")};
@@ -83,14 +83,32 @@ export const Subtitle = styled.p`
   color: ${({ darkText }) => (darkText ? "#000000" : "#fff")};
 `;
 
+export const TeckStackHeader = styled.p`
+  max-width: 440px;
+  margin-bottom: 35px;
+  font-size: 17px;
+  line-height: 24px;
+  color: ${({ darkText }) => (darkText ? "#000000" : "#fff")};
+`;
+
+export const TechStack = styled.p`
+  max-width: 440px;
+  margin-bottom: 35px;
+  font-size: 15px;
+  line-height: 24px;
+  color: ${({ darkText }) => (darkText ? "#000000" : "#fff")};
+`;
+
 export const BtnWrap = styled.div`
   display: flex;
   justify-content: flex-start;
 `;
 
 export const ImgWrap = styled.div`
-  width: 555px;
-  height: 100%;
+  @media only screen and (min-width: 600px) {
+    width: 555px;
+    height: 100%;
+  }
 `;
 
 export const Img = styled.img`

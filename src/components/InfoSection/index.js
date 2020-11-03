@@ -11,10 +11,14 @@ import {
   TextWrapper,
   TopLine,
   Heading,
+  TeckStackHeader,
+  TechStack,
   BtnWrap,
   ImgWrap,
   Img,
 } from "./InfoElements";
+
+import Iframe from "react-iframe";
 
 const InfoSection = ({
   lightBg,
@@ -25,8 +29,11 @@ const InfoSection = ({
   headLine,
   darkText,
   description,
+  teckStackHeader,
+  teckStack,
   buttonLabel,
   img,
+  url,
   alt,
   primary,
   dark,
@@ -42,6 +49,11 @@ const InfoSection = ({
                 <TopLine>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headLine}</Heading>
                 <Subtitle darkText={darkText}>{description}</Subtitle>
+                <TeckStackHeader darkText={darkText}>
+                  {teckStackHeader}
+                </TeckStackHeader>
+                <TechStack darkText={darkText}>{teckStack}</TechStack>
+
                 <BtnWrap>
                   <Button
                     to="home"
@@ -61,8 +73,18 @@ const InfoSection = ({
             </Column1>
             <Column2>
               <ImgWrap>
-                {" "}
-                <Img src={img} alt={alt} />
+                {img && <Img src={img} alt={alt} />}{" "}
+                {url && (
+                  <Iframe
+                    url={url}
+                    width="100%"
+                    height="450px"
+                    id="myId"
+                    className="myClassname"
+                    display="initial"
+                    position="relative"
+                  />
+                )}
               </ImgWrap>
             </Column2>
           </InfoRow>
