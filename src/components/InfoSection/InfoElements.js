@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import spinner from "./spinner.gif";
 
 export const InfoContainer = styled.div`
   color: #fff;
@@ -116,7 +115,7 @@ export const Spinner = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  background-color: rgba(232, 224, 223, 0.75);
 `;
 
 export const InfoWrapper = styled.div`

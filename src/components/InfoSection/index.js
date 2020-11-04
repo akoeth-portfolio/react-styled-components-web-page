@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "../ButtonElements";
 import { Subtitle } from "./InfoElements";
+import { useHistory } from "react-router-dom";
 
 import {
   InfoContainer,
@@ -19,6 +20,8 @@ import {
   Img,
 } from "./InfoElements";
 
+import { NavBtn, NavBtnLink } from "../Navbar/NavbarElements";
+
 import Iframe from "react-iframe";
 
 const InfoSection = ({
@@ -33,6 +36,8 @@ const InfoSection = ({
   teckStackHeader,
   teckStack,
   buttonLabel,
+  buttonTarget,
+  buttonExternalTarget,
   img,
   url,
   alt,
@@ -45,6 +50,14 @@ const InfoSection = ({
   const handleOnLoad = () => () => {
     setRenderIframe(true);
     console.log("onLoad");
+  };
+
+  let history = useHistory();
+
+  const handleClick = () => {
+    buttonExternalTarget
+      ? window.open(buttonExternalTarget, "_blank")
+      : history.push(`${buttonTarget}`);
   };
 
   return (
@@ -63,19 +76,35 @@ const InfoSection = ({
                 <TechStack darkText={darkText}>{teckStack}</TechStack>
 
                 <BtnWrap>
-                  <Button
-                    to="home"
-                    smooth={true}
-                    duration={500}
-                    spy={true}
-                    exact="true"
-                    offset={-80}
-                    primary={primary ? 1 : 0}
-                    dark={dark ? 1 : 0}
-                    dark2={dark2 ? 1 : 0}
-                  >
-                    {buttonLabel}
-                  </Button>
+                  {buttonExternalTarget ? (
+                    <Button
+                      smooth={true}
+                      duration={500}
+                      spy={true}
+                      exact="true"
+                      offset={-80}
+                      primary={primary ? 1 : 0}
+                      dark={dark ? 1 : 0}
+                      dark2={dark2 ? 1 : 0}
+                      onClick={() => handleClick()}
+                    >
+                      {" "}
+                      {buttonLabel}
+                    </Button>
+                  ) : (
+                    <NavBtn>
+                      <NavBtnLink
+                        to="web_shop"
+                        smooth={true}
+                        duration={500}
+                        spy={true}
+                        exact="true"
+                        offset={-80}
+                      >
+                        {buttonLabel}
+                      </NavBtnLink>
+                    </NavBtn>
+                  )}
                 </BtnWrap>
               </TextWrapper>
             </Column1>

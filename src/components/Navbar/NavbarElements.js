@@ -80,7 +80,7 @@ export const NavLinks = styled(LinkS)`
   height: 100%;
   cursor: pointer;
 
-  &:active {
+  &.active {
     border-bottom: 3px solid #01bf71;
   }
 `;
@@ -94,7 +94,7 @@ export const NavBtn = styled.nav`
   }
 `;
 
-export const NavBtnLink = styled(LinkR)`
+export const NavBtnLink = styled(LinkS)`
   border-radius: 50px;
   background: #01bf71;
   white-space: nowrap;

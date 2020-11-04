@@ -1,5 +1,6 @@
 import React from "react";
 import { FaBars } from "react-icons/fa";
+import { animateScroll as scroll } from "react-scroll";
 import {
   Nav,
   NavbarContainer,
@@ -13,29 +14,78 @@ import {
 } from "./NavbarElements";
 
 const Navbar = ({ toggle }) => {
+  const toggleHome = () => scroll.scrollToTop();
+
   return (
     <>
       <Nav>
         <NavbarContainer>
-          <NavLogo to="/">portfolio</NavLogo>
+          <NavLogo to="/" onClick={toggleHome}>
+            portfolio
+          </NavLogo>
           <MobileIcon onClick={toggle}>
             <FaBars />
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks to="about">About</NavLinks>
+              <NavLinks
+                to="about"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-80}
+              >
+                About
+              </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="web_shop">Web Shop</NavLinks>
+              <NavLinks
+                to="web_shop"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-80}
+              >
+                Web Shop
+              </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="sliding_puzzle">Sliding Puzzle</NavLinks>
+              <NavLinks
+                to="sliding_puzzle"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-80}
+              >
+                Sliding Puzzle
+              </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="tic_tac_toe">Tic Tac Toe</NavLinks>
+              <NavLinks
+                to="tic_tac_toe"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-80}
+              >
+                Tic Tac Toe
+              </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="blockchain">Block Chain</NavLinks>
+              <NavLinks
+                to="blockchain"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-80}
+              >
+                Block Chain
+              </NavLinks>
             </NavItem>
           </NavMenu>
         </NavbarContainer>
