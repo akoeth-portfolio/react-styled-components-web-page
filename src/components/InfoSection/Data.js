@@ -25,7 +25,7 @@ export const homeObjTwo = {
   topLine: "Project No 1",
   headLine: "Bicycle Webshop",
   description:
-    "This example app features some of the most common user facing functionalities that can be found in modern webshop applications. It has been build using the MERN tech stack.",
+    "This app features some of the most common user facing functionalities that can be found in modern webshop applications. It has been build using the MERN tech stack.",
   teckStackHeader: "Frameworks and Libraries:",
   teckStack: "React.js, Redux, Node.js, Express, MongoDB",
   buttonLabel: "open in tab",
@@ -65,7 +65,7 @@ export const homeObjFour = {
   topLine: "Project No 3",
   headLine: "Tic Tac Toe Chat",
   description:
-    "A classic implementation of the good old tic tac toe principle, this application enables its users to play against each while having a little chat.",
+    "A classic implementation of the good old tic tac toe principle, this application enables its users to play against each other while having a little chat.",
   teckStackHeader: "Frameworks and Libraries:",
   teckStack: "Node.js, Express, Socket io",
   buttonLabel: "see the code",

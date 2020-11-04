@@ -47,10 +47,7 @@ const InfoSection = ({
 }) => {
   const [renderIframe, setRenderIframe] = useState(false);
 
-  const handleOnLoad = () => () => {
-    setRenderIframe(true);
-    console.log("onLoad");
-  };
+  const handleOnLoad = () => () => setRenderIframe(true);
 
   let history = useHistory();
 
@@ -109,7 +106,7 @@ const InfoSection = ({
               </TextWrapper>
             </Column1>
             <Column2>
-              <ImgWrap>
+              <ImgWrap style={{ overflow: "hidden" }}>
                 {img && <Img src={img} alt={alt} />}{" "}
                 {url && !renderIframe && (
                   <Spinner>
@@ -125,11 +122,12 @@ const InfoSection = ({
                     url={url}
                     width="100%"
                     height="450px"
-                    id="myId"
-                    className="myClassname"
+                    id="iframe"
+                    className="iframe_class"
                     display="initial"
                     position="relative"
                     onLoad={handleOnLoad()}
+                    overflow="auto"
                   />
                 )}
               </ImgWrap>
