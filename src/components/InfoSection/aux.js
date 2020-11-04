@@ -6,11 +6,11 @@ setTimeout(() => {
 }, 1000);
 
 const doStuff = () => {
-  var iframe = document.querySelectorAll(".iframe_class");
+  var iframe = document.querySelector("#web_shop");
+
   console.log(iframe);
-  var elmnt = Array.from(iframe).map((iframe) =>
-    iframe.contentWindow.postMessage("iframe", "*")
-  );
+
+  iframe.contentWindow.postMessage("iframe", "*");
 };
 
 // var iframe = document.querySelectorAll(".iframe_class");

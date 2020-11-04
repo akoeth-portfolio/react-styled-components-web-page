@@ -59,7 +59,7 @@ const InfoSection = ({
 
   return (
     <>
-      <InfoContainer lightBg={lightBg} id={id}>
+      <InfoContainer lightBg={lightBg}>
         <InfoWrapper>
           <InfoRow imgStart={imgStart}>
             <Column1>
@@ -122,7 +122,7 @@ const InfoSection = ({
                     url={url}
                     width="100%"
                     height="450px"
-                    id="iframe"
+                    id={id}
                     className="iframe_class"
                     display="initial"
                     position="relative"
