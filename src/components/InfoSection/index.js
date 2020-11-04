@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Button } from "../ButtonElements";
 import { Subtitle } from "./InfoElements";
 import { useHistory } from "react-router-dom";
@@ -106,7 +106,7 @@ const InfoSection = ({
               </TextWrapper>
             </Column1>
             <Column2>
-              <ImgWrap style={{ overflow: "hidden" }}>
+              <ImgWrap>
                 {img && <Img src={img} alt={alt} />}{" "}
                 {url && !renderIframe && (
                   <Spinner>
@@ -127,7 +127,6 @@ const InfoSection = ({
                     display="initial"
                     position="relative"
                     onLoad={handleOnLoad()}
-                    overflow="auto"
                   />
                 )}
               </ImgWrap>

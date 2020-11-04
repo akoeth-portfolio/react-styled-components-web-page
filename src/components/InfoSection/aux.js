@@ -1,5 +1,6 @@
 // this code sends a message to the mern stack bicycle example web shop app so it knows that it is beeing displayed in an
 // iframe and therefore the scroll bars are to be hidden
+// the send message process for some reason is quite unreliable --> the 2nd setTimeout increases the chance that the message is acutally send.
 
 setTimeout(() => {
   doStuff();
@@ -10,11 +11,7 @@ const doStuff = () => {
 
   console.log(iframe);
 
-  iframe.contentWindow.postMessage("iframe", "*");
+  setTimeout(() => {
+    iframe.contentWindow.postMessage("iframe", "*");
+  }, 1000);
 };
-
-// var iframe = document.querySelectorAll(".iframe_class");
-// console.log(iframe);
-// var elmnt = Array.from(iframe).map((iframe) =>
-//   iframe.contentWindow.postMessage("iframe", "*")
-// );
