@@ -27,6 +27,7 @@ import Iframe from "react-iframe";
 const InfoSection = ({
   lightBg,
   id,
+  className,
   imgStart,
   topLine,
   lightText,
@@ -121,9 +122,11 @@ const InfoSection = ({
                   <Iframe
                     url={url}
                     width="100%"
-                    height="450px"
+                    height={
+                      className === "tic_tac_toe_class" ? "550px" : "450px"
+                    }
                     id={id}
-                    className="iframe_class"
+                    className={className}
                     display="initial"
                     position="relative"
                     onLoad={handleOnLoad()}

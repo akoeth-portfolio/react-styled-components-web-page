@@ -4,3 +4,10 @@
   padding: 0;
   font-family: "Encode Sans Expanded", sans-serif;
 }
+
+/* styling for the Tic Tac Toe Iframe */
+@media only screen and (min-width: 600px) {
+  .tic_tac_toe_class {
+    height: 400px;
+  }
+}

@@ -1,5 +1,6 @@
 export const homeObjOne = {
   id: "about_me",
+  className: "about_me_class",
   lightBg: true,
   lightText: false,
   lightTextDesc: false,
@@ -19,6 +20,7 @@ export const homeObjOne = {
 
 export const homeObjTwo = {
   id: "web_shop",
+  className: "web_shop_class",
   lightBg: false,
   lightText: true,
   lightTextDesc: true,
@@ -39,6 +41,7 @@ export const homeObjTwo = {
 
 export const homeObjThree = {
   id: "sliding_puzzle",
+  className: "sliding_puzzle_class",
   lightBg: true,
   lightText: false,
   lightTextDesc: false,
@@ -59,6 +62,7 @@ export const homeObjThree = {
 
 export const homeObjFour = {
   id: "tic_tac_toe",
+  className: "tic_tac_toe_class",
   lightBg: false,
   lightText: true,
   lightTextDesc: true,
@@ -79,6 +83,7 @@ export const homeObjFour = {
 
 export const homeObjFive = {
   id: "blockchain",
+  className: "blockchain_class",
   lightBg: true,
   lightText: false,
   lightTextDesc: false,

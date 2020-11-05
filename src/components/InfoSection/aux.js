@@ -13,3 +13,15 @@ const doStuff = () => {
     iframe.contentWindow.postMessage("iframe", "*");
   }, 1000);
 };
+
+// window.addEventListener("message", (bodyHeight) =>
+//   setTimeout(() => {
+//     dynamicIframeHeight(bodyHeight);
+//   }, 1000)
+// );
+
+// const dynamicIframeHeight = (height) => {
+//   if (height.data === "376px")
+//     document.querySelector(".tic_tac_toe_class").style.height = "85vw";
+//   else document.querySelector(".tic_tac_toe_class").style.height = height.data;
+// };
