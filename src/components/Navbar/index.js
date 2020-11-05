@@ -29,7 +29,7 @@ const Navbar = ({ toggle }) => {
           <NavMenu>
             <NavItem>
               <NavLinks
-                to="about"
+                to="about_me"
                 smooth={true}
                 duration={500}
                 spy={true}

@@ -7,9 +7,7 @@ setTimeout(() => {
 }, 1000);
 
 const doStuff = () => {
-  var iframe = document.querySelector("#web_shop");
-
-  console.log(iframe);
+  var iframe = document.querySelector("Iframe");
 
   setTimeout(() => {
     iframe.contentWindow.postMessage("iframe", "*");

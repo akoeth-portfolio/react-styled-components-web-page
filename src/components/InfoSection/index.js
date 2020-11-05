@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { Button } from "../ButtonElements";
 import { Subtitle } from "./InfoElements";
 import { useHistory } from "react-router-dom";
@@ -59,7 +59,7 @@ const InfoSection = ({
 
   return (
     <>
-      <InfoContainer lightBg={lightBg}>
+      <InfoContainer lightBg={lightBg} id={id}>
         <InfoWrapper>
           <InfoRow imgStart={imgStart}>
             <Column1>
