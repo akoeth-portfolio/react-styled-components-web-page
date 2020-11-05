@@ -31,7 +31,7 @@ export const Column1 = styled.div`
 
 export const Column2 = styled.div`
   margin-bottom: 15px;
-  padding: 0 15px;
+  /* padding: 0 15px; */
   grid-area: col2;
 `;
 
@@ -128,7 +128,7 @@ export const InfoWrapper = styled.div`
   max-width: 1100px;
   margin-right: auto;
   margin-left: auto;
-  padding: 0 24px;
+  /* padding: 0 24px; */
   justify-content: center;
 
   @media screen and (min-width: 1200px) {
