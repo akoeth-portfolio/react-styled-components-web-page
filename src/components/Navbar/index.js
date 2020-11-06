@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { animateScroll as scroll } from "react-scroll";
 import {
@@ -12,82 +12,94 @@ import {
 } from "./NavbarElements";
 
 const Navbar = ({ toggle }) => {
+  const [renderNavbar, setRenderNavbar] = useState(true);
+
+  window.onscroll = function (e) {
+    if (window.screen.width >= 598 && window.screen.width <= 768) {
+      setRenderNavbar(this.oldScroll > this.scrollY);
+      this.oldScroll = this.scrollY;
+    }
+  };
+
   const toggleHome = () => scroll.scrollToTop();
 
   return (
     <>
-      <Nav id="nav">
-        <NavbarContainer>
-          <NavLogo to="/" onClick={toggleHome}>
-            portfolio
-          </NavLogo>
-          <MobileIcon onClick={toggle}>
-            <FaBars />
-          </MobileIcon>
-          <NavMenu>
-            <NavItem>
-              <NavLinks
-                to="about_me"
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact="true"
-                offset={-80}
-              >
-                About
-              </NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks
-                to="web_shop"
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact="true"
-                offset={-80}
-              >
-                Web Shop
-              </NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks
-                to="sliding_puzzle"
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact="true"
-                offset={-80}
-              >
-                Sliding Puzzle
-              </NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks
-                to="tic_tac_toe"
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact="true"
-                offset={-80}
-              >
-                Tic Tac Toe
-              </NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks
-                to="blockchain"
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact="true"
-                offset={-80}
-              >
-                Block Chain
-              </NavLinks>
-            </NavItem>
-          </NavMenu>
-        </NavbarContainer>
-      </Nav>{" "}
+      {renderNavbar && (
+        <Nav id="nav">
+          <NavbarContainer>
+            <NavLogo to="/" onClick={toggleHome}>
+              portfolio
+            </NavLogo>
+            <MobileIcon onClick={toggle}>
+              <FaBars />
+            </MobileIcon>
+            <NavMenu>
+              <NavItem>
+                <NavLinks
+                  to="about_me"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                >
+                  About
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks
+                  to="web_shop"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                >
+                  Web Shop
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks
+                  to="sliding_puzzle"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                >
+                  Sliding Puzzle
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks
+                  to="tic_tac_toe"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                >
+                  Tic Tac Toe
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks
+                  to="blockchain"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                >
+                  Block Chain
+                </NavLinks>
+              </NavItem>
+            </NavMenu>
+          </NavbarContainer>
+        </Nav>
+      )}
+      ;
     </>
   );
 };

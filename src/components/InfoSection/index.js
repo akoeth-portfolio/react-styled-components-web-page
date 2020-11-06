@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Button } from "../ButtonElements";
 import { Subtitle } from "./InfoElements";
 import { useHistory } from "react-router-dom";
+import { doStuff } from "./aux";
 
 import {
   InfoContainer,
@@ -48,7 +49,16 @@ const InfoSection = ({
 }) => {
   const [renderIframe, setRenderIframe] = useState(false);
 
-  const handleOnLoad = () => () => setRenderIframe(true);
+  const refEl = useRef(null);
+
+  const HandleOnLoad = () => {
+    setRenderIframe(true);
+    // useRef hook grabs parent element of iframe (can not grab iframe directly bc its rendered conditionaly)
+    // access child element (i.e. iframe) by current.children[1]
+    // send message to iframe content (webshop) so it hides scroll bars
+    if (refEl.current)
+      refEl.current.children[1].contentWindow.postMessage("iframe", "*");
+  };
 
   let history = useHistory();
 
@@ -107,7 +117,7 @@ const InfoSection = ({
               </TextWrapper>
             </Column1>
             <Column2>
-              <ImgWrap>
+              <ImgWrap ref={id === "web_shop" ? refEl : null}>
                 {img && <Img src={img} alt={alt} />}{" "}
                 {url && !renderIframe && (
                   <Spinner>
@@ -129,7 +139,7 @@ const InfoSection = ({
                     className={className}
                     display="initial"
                     position="relative"
-                    onLoad={handleOnLoad()}
+                    onLoad={HandleOnLoad}
                   />
                 )}
               </ImgWrap>
