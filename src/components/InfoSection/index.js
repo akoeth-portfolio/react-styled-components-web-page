@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from "react";
 import { Button } from "../ButtonElements";
 import { Subtitle } from "./InfoElements";
 import { useHistory } from "react-router-dom";
-import { doStuff } from "./aux";
 
 import {
   InfoContainer,
