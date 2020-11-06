@@ -14,10 +14,18 @@ import {
 const Navbar = ({ toggle }) => {
   const [renderNavbar, setRenderNavbar] = useState(true);
 
+  const [mobileLandscape, setMobileLandscape] = useState(false);
+
   window.onscroll = function (e) {
-    if (window.screen.width >= 598 && window.screen.width <= 768) {
+    setMobileLandscape(
+      window.screen.width >= 598 && window.screen.width <= 768
+    );
+    if (mobileLandscape) {
       setRenderNavbar(this.oldScroll > this.scrollY);
       this.oldScroll = this.scrollY;
+      if (window.pageYOffset < 100) setMobileLandscape(false);
+    } else {
+      setRenderNavbar(true);
     }
   };
 
@@ -26,7 +34,7 @@ const Navbar = ({ toggle }) => {
   return (
     <>
       {renderNavbar && (
-        <Nav id="nav">
+        <Nav id="nav" style={{ opacity: mobileLandscape ? "0.75" : "1" }}>
           <NavbarContainer>
             <NavLogo to="/" onClick={toggleHome}>
               portfolio
