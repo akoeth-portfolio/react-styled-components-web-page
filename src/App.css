@@ -13,6 +13,10 @@
 }
 
 /* Navbar */
+#nav {
+  opacity: 0.75;
+}
+
 .remove-navbar {
   display: none !important;
 }
