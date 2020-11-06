@@ -16,7 +16,7 @@ const Navbar = ({ toggle }) => {
 
   return (
     <>
-      <Nav>
+      <Nav id="nav">
         <NavbarContainer>
           <NavLogo to="/" onClick={toggleHome}>
             portfolio

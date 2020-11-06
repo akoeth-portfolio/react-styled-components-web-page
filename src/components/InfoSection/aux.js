@@ -14,14 +14,13 @@ const doStuff = () => {
   }, 1000);
 };
 
-// window.addEventListener("message", (bodyHeight) =>
-//   setTimeout(() => {
-//     dynamicIframeHeight(bodyHeight);
-//   }, 1000)
-// );
+//No fixed navbar on width 598px - 768px
+document.addEventListener("scroll", () => removeNavbar());
 
-// const dynamicIframeHeight = (height) => {
-//   if (height.data === "376px")
-//     document.querySelector(".tic_tac_toe_class").style.height = "85vw";
-//   else document.querySelector(".tic_tac_toe_class").style.height = height.data;
-// };
+const removeNavbar = () => {
+  if (window.screen.width >= 598 && window.screen.width <= 768) {
+    window.pageYOffset > 10
+      ? document.querySelector("#nav").classList.add("remove-navbar")
+      : document.querySelector("#nav").classList.remove("remove-navbar");
+  }
+};
