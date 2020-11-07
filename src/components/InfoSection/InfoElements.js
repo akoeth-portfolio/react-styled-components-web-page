@@ -161,3 +161,9 @@ export const InfoWrapper = styled.div`
     height: 900px;
   }
 `;
+
+export const ReloadBtn = styled.button`
+  position: absolute;
+  z-index: 2 !important;
+  font-size: 4rem;
+`;

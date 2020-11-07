@@ -2,6 +2,9 @@ import React, { useState, useRef, useEffect } from "react";
 import { Button } from "../ButtonElements";
 import { Subtitle } from "./InfoElements";
 import { useHistory } from "react-router-dom";
+import { ImNewTab } from "react-icons/im";
+import { FaGithub } from "react-icons/fa";
+import { ImLoop2 } from "react-icons/im";
 
 import {
   InfoContainer,
@@ -18,11 +21,14 @@ import {
   BtnWrap,
   ImgWrap,
   Img,
+  ReloadBtn,
 } from "./InfoElements";
 
 import { NavBtn, NavBtnLink } from "../Navbar/NavbarElements";
 
 import Iframe from "react-iframe";
+
+import { ArrowForward, ArrowRight } from "../HeroSection/HeroElements";
 
 const InfoSection = ({
   lightBg,
@@ -48,15 +54,18 @@ const InfoSection = ({
 }) => {
   const [renderIframe, setRenderIframe] = useState(false);
 
-  const refEl = useRef(null);
+  const refImgWraper = useRef(null);
+
+  const refReloadBtn = useRef(null);
 
   const HandleOnLoad = () => {
     setRenderIframe(true);
     // useRef hook grabs parent element of iframe (can not grab iframe directly bc its rendered conditionaly)
     // access child element (i.e. iframe) by current.children[1]
     // send message to iframe content (webshop) so it hides scroll bars
-    if (refEl.current)
-      refEl.current.children[1].contentWindow.postMessage("iframe", "*");
+    if (refImgWraper.current) {
+      refImgWraper.current.children[1].contentWindow.postMessage("iframe", "*");
+    }
   };
 
   let history = useHistory();
@@ -66,6 +75,34 @@ const InfoSection = ({
       ? window.open(buttonExternalTarget, "_blank")
       : history.push(`${buttonTarget}`);
   };
+
+  const [hover, setHover] = useState(false);
+
+  const onHover = () => {
+    setHover(!hover);
+  };
+
+  // Tic tac toe iframe dynmaically displays reload button in upper left corner if app has fallen asleep durring mobile screen off
+  const sendMessagetoApp = () =>
+    refImgWraper.current.children[1].contentWindow.postMessage(
+      "reload-app",
+      "*"
+    );
+
+  if (refReloadBtn.current) {
+    const removeReloadButton = () => document;
+    refReloadBtn.current.classList.add("reload-button-display-none");
+
+    window.addEventListener("message", (msg) => {
+      if (msg.data === "app-sleeps") {
+        refReloadBtn.current.classList.remove("reload-button-display-none");
+        refReloadBtn.current.addEventListener("click", () => {
+          sendMessagetoApp();
+          removeReloadButton();
+        });
+      }
+    });
+  }
 
   return (
     <>
@@ -97,8 +134,10 @@ const InfoSection = ({
                     >
                       {" "}
                       {buttonLabel}&nbsp;
-                      {id === "tic_tac_toe" && <i class="fab fa-github"></i>}
-                      {id === "sliding_puzzle" && <i class="fab fa-github"></i>}
+                      {id === "tic_tac_toe" && <FaGithub />}
+                      {id === "sliding_puzzle" && <FaGithub />}
+                      {id === "web_shop" && <ImNewTab />}
+                      {id === "blockchain" && <ImNewTab />}
                     </Button>
                   ) : (
                     <NavBtn>
@@ -109,8 +148,11 @@ const InfoSection = ({
                         spy={true}
                         exact="true"
                         offset={-80}
+                        onMouseEnter={onHover}
+                        onMouseLeave={onHover}
                       >
-                        {buttonLabel}
+                        {buttonLabel}&nbsp;
+                        {hover ? <ArrowForward /> : <ArrowRight />}
                       </NavBtnLink>
                     </NavBtn>
                   )}
@@ -118,7 +160,16 @@ const InfoSection = ({
               </TextWrapper>
             </Column1>
             <Column2 className={className}>
-              <ImgWrap ref={id === "web_shop" ? refEl : null}>
+              <ImgWrap ref={id === "web_shop" ? refImgWraper : null}>
+                {id === "tic_tac_toe" && (
+                  <ReloadBtn
+                    id="reload_btn"
+                    className="reload-button-display-none"
+                    ref={refReloadBtn}
+                  >
+                    <ImLoop2 />
+                  </ReloadBtn>
+                )}
                 {img && <Img id="info_section_image" src={img} alt={alt} />}{" "}
                 {url && !renderIframe && (
                   <Spinner>

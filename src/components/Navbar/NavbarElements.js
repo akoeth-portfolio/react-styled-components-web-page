@@ -92,20 +92,17 @@ export const NavLinks = styled(LinkS)`
 export const NavBtn = styled.nav`
   display: flex;
   align-items: center;
-
-  /* @media screen and (max-width: 760px) {
-    display: none;
-  } */
 `;
 
 export const NavBtnLink = styled(LinkS)`
+  display: flex;
+  align-items: center;
   border-radius: 50px;
   background: black;
   white-space: nowrap;
   padding: 10px 22px;
   color: white;
   font-size: 16px;
-  font-weight: bold;
   outline: none;
   border: none;
   cursor: pointer;
