@@ -18,30 +18,30 @@ const SidebarElements = ({ isOpen, toggle }) => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to="about" onClick={toggle}>
+          <SidebarLink to="about_me" onClick={toggle}>
             About
           </SidebarLink>
         </SidebarMenu>
         <SidebarMenu>
-          <SidebarLink to="discover" onClick={toggle}>
-            Discover
+          <SidebarLink to="web_shop" onClick={toggle}>
+            Web Shop
           </SidebarLink>
         </SidebarMenu>
         <SidebarMenu>
-          <SidebarLink to="services" onClick={toggle}>
-            Services
+          <SidebarLink to="sliding_puzzle" onClick={toggle}>
+            Sliding Puzzle
           </SidebarLink>
         </SidebarMenu>
         <SidebarMenu>
-          <SidebarLink to="signup" onClick={toggle}>
-            Sign Up
+          <SidebarLink to="tic_tac_toe" onClick={toggle}>
+            Tic Tac Toe
           </SidebarLink>
         </SidebarMenu>
-        <SideBtnWrap>
-          <SidebarRoutes to="/singin" onClick={toggle}>
-            Sign In
-          </SidebarRoutes>
-        </SideBtnWrap>
+        <SidebarMenu>
+          <SidebarLink to="blockchain" onClick={toggle}>
+            Blockchain
+          </SidebarLink>
+        </SidebarMenu>
       </SidebarWrapper>
     </SidebarContainer>
   );

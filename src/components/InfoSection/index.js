@@ -82,7 +82,7 @@ const InfoSection = ({
                 </TeckStackHeader>
                 <TechStack darkText={darkText}>{teckStack}</TechStack>
 
-                <BtnWrap>
+                <BtnWrap id="btn_wrap_desktop">
                   {buttonExternalTarget ? (
                     <Button
                       smooth={true}
@@ -117,11 +117,9 @@ const InfoSection = ({
                 </BtnWrap>
               </TextWrapper>
             </Column1>
-            <Column2>
+            <Column2 className={className}>
               <ImgWrap ref={id === "web_shop" ? refEl : null}>
-                {img && window.screen.width > 768 && (
-                  <Img src={img} alt={alt} />
-                )}{" "}
+                {img && <Img id="info_section_image" src={img} alt={alt} />}{" "}
                 {url && !renderIframe && (
                   <Spinner>
                     {" "}
@@ -146,6 +144,39 @@ const InfoSection = ({
                   />
                 )}
               </ImgWrap>
+              <BtnWrap id="btn_wrap_mobile">
+                {buttonExternalTarget ? (
+                  <Button
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact="true"
+                    offset={-80}
+                    primary={primary ? 1 : 0}
+                    dark={dark ? 1 : 0}
+                    dark2={dark2 ? 1 : 0}
+                    onClick={() => handleClick()}
+                  >
+                    {" "}
+                    {buttonLabel}&nbsp;
+                    {id === "tic_tac_toe" && <i class="fab fa-github"></i>}
+                    {id === "sliding_puzzle" && <i class="fab fa-github"></i>}
+                  </Button>
+                ) : (
+                  <NavBtn>
+                    <NavBtnLink
+                      to="web_shop"
+                      smooth={true}
+                      duration={500}
+                      spy={true}
+                      exact="true"
+                      offset={-80}
+                    >
+                      {buttonLabel}
+                    </NavBtnLink>
+                  </NavBtn>
+                )}
+              </BtnWrap>
             </Column2>
           </InfoRow>
         </InfoWrapper>

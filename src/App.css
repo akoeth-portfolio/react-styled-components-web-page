@@ -38,3 +38,37 @@
 .remove-navbar {
   display: none !important;
 }
+
+/* @components/InfoSection/index.js */
+#btn_wrap_mobile {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  #btn_wrap_desktop {
+    display: none;
+  }
+
+  #btn_wrap_mobile {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #btn_wrap_desktop {
+    display: flex;
+  }
+
+  #btn_wrap_mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  div > .about_me_class {
+    display: none;
+  }
+}

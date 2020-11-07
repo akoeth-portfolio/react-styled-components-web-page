@@ -13,6 +13,10 @@ export const InfoContainer = styled.div`
 export const InfoRow = styled.div`
   width: 100vw;
   display: grid;
+  grid-column-gap: 2rem;
+  grid-row-gap: 0rem;
+  /* grid-gap: 20px 50px; */
+  /* grid-row-gap: 2rem; */
   grid-auto-columns: minmax(auto 1fr);
   align-items: center;
   justify-content: center;
@@ -30,7 +34,7 @@ export const InfoRow = styled.div`
 `;
 
 export const Column1 = styled.div`
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
   padding: 0 15px;
   grid-area: col1;
 `;
@@ -50,7 +54,7 @@ export const TextWrapper = styled.div`
   width: 100%;
   /* max-width: 540px; */
   padding-top: 0;
-  padding-bottom: 60px;
+  /* padding-bottom: 60px; */
 `;
 
 export const TopLine = styled.div`
@@ -96,10 +100,14 @@ export const TeckStackHeader = styled.p`
 
 export const TechStack = styled.p`
   max-width: 440px;
-  margin-bottom: 35px;
+
   font-size: 15px;
   line-height: 24px;
   color: ${({ darkText }) => (darkText ? "#000000" : "#fff")};
+
+  @media only screen and (min-width: 768px) {
+    margin-bottom: 35px;
+  }
 `;
 
 export const BtnWrap = styled.div`
