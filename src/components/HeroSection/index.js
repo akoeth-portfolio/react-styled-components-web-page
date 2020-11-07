@@ -28,10 +28,8 @@ const HeroSection = () => {
       </HeroBg>
       <HeroContent>
         <HeroH1>Portfolio Page</HeroH1>
-        <HeroP>
-          This is my Portfolio Page. It contains the projects, that I have
-          finished so far.
-        </HeroP>
+        <HeroP>Welcome!</HeroP>
+        <HeroP>Hit the button below and see what this is all about.</HeroP>
         <HeroBtnWrapper>
           <Button
             to="about_me"

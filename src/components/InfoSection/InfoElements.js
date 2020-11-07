@@ -47,7 +47,8 @@ export const Column2 = styled.div`
 `;
 
 export const TextWrapper = styled.div`
-  max-width: 540px;
+  width: 100%;
+  /* max-width: 540px; */
   padding-top: 0;
   padding-bottom: 60px;
 `;
@@ -76,7 +77,8 @@ export const Heading = styled.h1`
 `;
 
 export const Subtitle = styled.p`
-  max-width: 440px;
+  /* max-width: 440px; */
+  width: 100%;
   margin-bottom: 35px;
   font-size: 18px;
   line-height: 24px;
@@ -86,9 +88,9 @@ export const Subtitle = styled.p`
 
 export const TeckStackHeader = styled.p`
   max-width: 440px;
-  margin-bottom: 35px;
   font-size: 17px;
   line-height: 24px;
+  font-weight: bold;
   color: ${({ darkText }) => (darkText ? "#000000" : "#fff")};
 `;
 

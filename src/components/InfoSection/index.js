@@ -96,7 +96,9 @@ const InfoSection = ({
                       onClick={() => handleClick()}
                     >
                       {" "}
-                      {buttonLabel}
+                      {buttonLabel}&nbsp;
+                      {id === "tic_tac_toe" && <i class="fab fa-github"></i>}
+                      {id === "sliding_puzzle" && <i class="fab fa-github"></i>}
                     </Button>
                   ) : (
                     <NavBtn>
@@ -117,7 +119,9 @@ const InfoSection = ({
             </Column1>
             <Column2>
               <ImgWrap ref={id === "web_shop" ? refEl : null}>
-                {img && <Img src={img} alt={alt} />}{" "}
+                {img && window.screen.width > 768 && (
+                  <Img src={img} alt={alt} />
+                )}{" "}
                 {url && !renderIframe && (
                   <Spinner>
                     {" "}

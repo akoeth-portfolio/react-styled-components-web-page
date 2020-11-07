@@ -5,6 +5,28 @@
   font-family: "Encode Sans Expanded", sans-serif;
 }
 
+/* About me container */
+@media only screen and (max-width: 768px) {
+  #about_me {
+    padding-top: 0;
+    height: 500px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #about_me {
+    padding-top: 0;
+    height: 600px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #about_me {
+    padding-top: 0;
+    height: 700px;
+  }
+}
+
 /* Tic Tac Toe Iframe */
 @media only screen and (min-width: 600px) {
   .tic_tac_toe_class {
