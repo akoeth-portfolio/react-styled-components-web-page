@@ -86,11 +86,14 @@ const InfoSection = ({
 
   if (refReloadBtn.current) {
     const sendMessagetoApp = () => {
-      if (refImgWraper.current)
-        refImgWraper.current.children[1].contentWindow.postMessage(
-          "reload-app",
-          "*"
-        );
+      // refImgWraper.current.children[1].contentWindow.postMessage(
+      //   "reload-app",
+      //   "*"
+      // );
+
+      document
+        .querySelector(".tic_tac_toe_class")
+        .contentWindow.postMessage("reload-app", "*");
     };
 
     const removeReloadButton = () => document;
@@ -99,11 +102,7 @@ const InfoSection = ({
     window.addEventListener("message", (msg) => {
       if (msg.data === "app-sleeps") {
         refReloadBtn.current.classList.remove("reload-button-display-none");
-        // refReloadBtn.current.addEventListener("click", () => {
-        //   sendMessagetoApp();
-        //   removeReloadButton();
-        // });
-        document.querySelector("#reload_btn").addEventListener("click", () => {
+        refReloadBtn.current.addEventListener("click", () => {
           sendMessagetoApp();
           removeReloadButton();
         });
