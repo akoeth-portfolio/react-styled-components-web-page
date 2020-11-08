@@ -97,7 +97,7 @@ const InfoSection = ({
     };
 
     const removeReloadButton = () => document;
-    document.querySelector("reload_btn").add("reload-button-display-none");
+    document.querySelector("#reload_btn").add("reload-button-display-none");
 
     window.addEventListener("message", (msg) => {
       if (msg.data === "app-sleeps") {
