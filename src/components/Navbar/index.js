@@ -16,6 +16,8 @@ const Navbar = ({ toggle }) => {
 
   const [navbarTransparency, setNavbarTransparency] = useState(false);
 
+  // const [scrollOffset, setScrollOffset] = useState()
+
   // if screen is in mobile landscape mode navbar is transparent, disappears on scroll down and reappears on scroll up
   // on scroll to topmost postion navbar is opaque
   window.onscroll = function (e) {
@@ -32,6 +34,8 @@ const Navbar = ({ toggle }) => {
   };
 
   const toggleHome = () => scroll.scrollToTop();
+
+  // if (window.screen.width >= 598 && window.screen.width <= 768)
 
   return (
     <>

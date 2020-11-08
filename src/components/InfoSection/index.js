@@ -85,11 +85,13 @@ const InfoSection = ({
   // Tic tac toe iframe dynmaically displays reload button in upper left corner if app has fallen asleep durring mobile screen off
 
   if (refReloadBtn.current) {
-    const sendMessagetoApp = () =>
-      refImgWraper.current.children[1].contentWindow.postMessage(
-        "reload-app",
-        "*"
-      );
+    const sendMessagetoApp = () => {
+      if (refImgWraper.current)
+        refImgWraper.current.children[1].contentWindow.postMessage(
+          "reload-app",
+          "*"
+        );
+    };
 
     const removeReloadButton = () => document;
     refReloadBtn.current.classList.add("reload-button-display-none");
