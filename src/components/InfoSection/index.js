@@ -165,7 +165,7 @@ const InfoSection = ({
                 </BtnWrap>
               </TextWrapper>
             </Column1>
-            <Column2 className={className}>
+            <Column2>
               <ImgWrap ref={id === "web_shop" ? refImgWraper : null}>
                 {id === "tic_tac_toe" && (
                   <ReloadBtn
