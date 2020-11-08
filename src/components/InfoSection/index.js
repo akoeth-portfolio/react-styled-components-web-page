@@ -93,7 +93,7 @@ const InfoSection = ({
     };
 
     const removeReloadButton = () =>
-      refReloadBtn.classList.add("reload-button-display-none");
+      refReloadBtn.current.classList.add("reload-button-display-none");
 
     window.addEventListener("message", (msg) => {
       if (msg.data === "app-sleeps") {
