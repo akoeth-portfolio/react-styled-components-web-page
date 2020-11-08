@@ -99,7 +99,11 @@ const InfoSection = ({
     window.addEventListener("message", (msg) => {
       if (msg.data === "app-sleeps") {
         refReloadBtn.current.classList.remove("reload-button-display-none");
-        refReloadBtn.current.addEventListener("click", () => {
+        // refReloadBtn.current.addEventListener("click", () => {
+        //   sendMessagetoApp();
+        //   removeReloadButton();
+        // });
+        document.querySelector("#reload_btn").addEventListener("click", () => {
           sendMessagetoApp();
           removeReloadButton();
         });

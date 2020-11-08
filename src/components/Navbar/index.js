@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaBars } from "react-icons/fa";
 import { animateScroll as scroll } from "react-scroll";
 import {
@@ -16,7 +16,14 @@ const Navbar = ({ toggle }) => {
 
   const [navbarTransparency, setNavbarTransparency] = useState(false);
 
-  // const [scrollOffset, setScrollOffset] = useState()
+  const [scrollOffset, setScrollOffset] = useState(-80);
+
+  useEffect(() => {
+    if (window.screen.width >= 768 && window.screen.width <= 992)
+      setScrollOffset(60);
+
+    if (window.screen.width > 1200) setScrollOffset(-80);
+  }, []);
 
   // if screen is in mobile landscape mode navbar is transparent, disappears on scroll down and reappears on scroll up
   // on scroll to topmost postion navbar is opaque
@@ -34,8 +41,6 @@ const Navbar = ({ toggle }) => {
   };
 
   const toggleHome = () => scroll.scrollToTop();
-
-  // if (window.screen.width >= 598 && window.screen.width <= 768)
 
   return (
     <>
@@ -56,7 +61,7 @@ const Navbar = ({ toggle }) => {
                   duration={500}
                   spy={true}
                   exact="true"
-                  offset={-80}
+                  offset={scrollOffset}
                 >
                   About
                 </NavLinks>
@@ -68,7 +73,7 @@ const Navbar = ({ toggle }) => {
                   duration={500}
                   spy={true}
                   exact="true"
-                  offset={-80}
+                  offset={scrollOffset}
                 >
                   Web Shop
                 </NavLinks>
@@ -80,7 +85,7 @@ const Navbar = ({ toggle }) => {
                   duration={500}
                   spy={true}
                   exact="true"
-                  offset={-80}
+                  offset={scrollOffset}
                 >
                   Sliding Puzzle
                 </NavLinks>
@@ -92,7 +97,7 @@ const Navbar = ({ toggle }) => {
                   duration={500}
                   spy={true}
                   exact="true"
-                  offset={-80}
+                  offset={scrollOffset}
                 >
                   Tic Tac Toe
                 </NavLinks>
@@ -104,7 +109,7 @@ const Navbar = ({ toggle }) => {
                   duration={500}
                   spy={true}
                   exact="true"
-                  offset={-80}
+                  offset={scrollOffset}
                 >
                   Block Chain
                 </NavLinks>
