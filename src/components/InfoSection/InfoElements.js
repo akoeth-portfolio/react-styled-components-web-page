@@ -181,4 +181,8 @@ export const ReloadBtn = styled.button`
   left: 0;
   z-index: 2 !important;
   font-size: 4rem;
+  color: white;
+  padding: 0;
+  border: none;
+  background: none;
 `;

@@ -4,7 +4,7 @@ import { Subtitle } from "./InfoElements";
 import { useHistory } from "react-router-dom";
 import { ImNewTab } from "react-icons/im";
 import { FaGithub } from "react-icons/fa";
-import { ImLoop2 } from "react-icons/im";
+import { AiOutlineReload } from "react-icons/ai";
 
 import {
   InfoContainer,
@@ -20,7 +20,6 @@ import {
   TechStack,
   BtnWrap,
   IframeWrap,
-  Img,
   ReloadBtn,
 } from "./InfoElements";
 
@@ -54,13 +53,36 @@ const InfoSection = ({
 
   const refReloadBtn = useRef(null);
 
+  // Tic tac toe iframe dynamically displays reload button in upper left corner if app has fallen asleep durring mobile screen off
+  const sendMessagetoApp = () => {
+    console.log(refIframe.current.children[0]);
+    if (refIframe.current && refIframe.current.children[0].id === "tic_tac_toe")
+      refIframe.current.children[0].contentWindow.postMessage(
+        "reload-app",
+        "*"
+      );
+  };
+
+  const removeReloadButton = () =>
+    refReloadBtn.current.classList.add("reload-button-display-none");
+
+  window.addEventListener("message", (msg) => {
+    if (msg.data === "app-sleeps") {
+      refReloadBtn.current.classList.remove("reload-button-display-none");
+      refReloadBtn.current.addEventListener("click", () => {
+        sendMessagetoApp();
+        removeReloadButton();
+      });
+    }
+  });
+
   const handleOnLoad = () => {
     setIframeRendered(true);
     // useRef hook grabs parent element of iframe (can not grab iframe directly bc I don't know why)
     // access child element (i.e. iframe) by current.children[1]
     // send message to iframe content (webshop) so it hides scroll bars
-    if (refIframe.current && refIframe.current.children[1].id === "web_shop")
-      refIframe.current.children[1].contentWindow.postMessage("iframe", "*");
+    if (refIframe.current && refIframe.current.children[0].id === "web_shop")
+      refIframe.current.children[0].contentWindow.postMessage("iframe", "*");
   };
 
   let history = useHistory();
@@ -70,42 +92,6 @@ const InfoSection = ({
       ? window.open(buttonExternalTarget, "_blank")
       : history.push(`${buttonTarget}`);
   };
-
-  // Tic tac toe iframe dynamically displays reload button in upper left corner if app has fallen asleep durring mobile screen off
-
-  if (refReloadBtn.current) {
-    const sendMessagetoApp = () => {
-      if (
-        refIframe.current &&
-        refIframe.current.children[1].id === "tic_tac_toe"
-      )
-        refIframe.current.children[1].contentWindow.postMessage(
-          "reload-app",
-          "*"
-        );
-    };
-    // refImgWraper.current.children[1].contentWindow.postMessage(
-    //   "reload-app",
-    //   "*"
-    // );
-
-    // document
-    //   .querySelector(".tic_tac_toe_class")
-    //   .contentWindow.postMessage("reload-app", "*");
-
-    const removeReloadButton = () =>
-      refReloadBtn.current.classList.add("reload-button-display-none");
-
-    window.addEventListener("message", (msg) => {
-      if (msg.data === "app-sleeps") {
-        refReloadBtn.current.classList.remove("reload-button-display-none");
-        refReloadBtn.current.addEventListener("click", () => {
-          sendMessagetoApp();
-          removeReloadButton();
-        });
-      }
-    });
-  }
 
   return (
     <>
@@ -144,7 +130,7 @@ const InfoSection = ({
               </TextWrapper>
             </Column1>
             <Column2>
-              <IframeWrap ref={refIframe}>
+              <IframeWrap>
                 {!iframeRendered && (
                   <Spinner>
                     {" "}
@@ -154,25 +140,30 @@ const InfoSection = ({
                     />
                   </Spinner>
                 )}
-                <Iframe
-                  id={id}
-                  className={className}
-                  url={url}
-                  width="100%"
-                  height={className === "tic_tac_toe_class" ? "550px" : "450px"}
-                  display="initial"
-                  position="relative"
-                  onLoad={handleOnLoad}
-                />
-                {id === "tic_tac_toe" && (
-                  <ReloadBtn
-                    id="reload_btn"
-                    className="reload-button-display-none"
-                    ref={refReloadBtn}
-                  >
-                    <ImLoop2 />
-                  </ReloadBtn>
-                )}
+                <div ref={refIframe}>
+                  <Iframe
+                    id={id}
+                    className={className}
+                    url={url}
+                    width="100%"
+                    height={
+                      className === "tic_tac_toe_class" ? "550px" : "450px"
+                    }
+                    display="initial"
+                    position="relative"
+                    onLoad={handleOnLoad}
+                  />
+
+                  {id === "tic_tac_toe" && (
+                    <ReloadBtn
+                      id="reload_btn"
+                      className="reload-button-display-none"
+                      ref={refReloadBtn}
+                    >
+                      <AiOutlineReload />
+                    </ReloadBtn>
+                  )}
+                </div>
               </IframeWrap>
               <BtnWrap id="btn_wrap_mobile">
                 <Button
