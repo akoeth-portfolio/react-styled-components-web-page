@@ -178,6 +178,7 @@ export const InfoWrapper = styled.div`
 
 export const ReloadBtn = styled.button`
   position: absolute;
+  left: 0;
   z-index: 2 !important;
   font-size: 4rem;
 `;

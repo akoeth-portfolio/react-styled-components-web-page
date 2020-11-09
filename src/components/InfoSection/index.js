@@ -59,9 +59,8 @@ const InfoSection = ({
     // useRef hook grabs parent element of iframe (can not grab iframe directly bc I don't know why)
     // access child element (i.e. iframe) by current.children[1]
     // send message to iframe content (webshop) so it hides scroll bars
-    if (refIframe.current) {
+    if (refIframe.current && refIframe.current.children[1].id === "web_shop")
       refIframe.current.children[1].contentWindow.postMessage("iframe", "*");
-    }
   };
 
   let history = useHistory();
@@ -76,21 +75,23 @@ const InfoSection = ({
 
   if (refReloadBtn.current) {
     const sendMessagetoApp = () => {
-      if (refIframe.current) {
+      if (
+        refIframe.current &&
+        refIframe.current.children[1].id === "tic_tac_toe"
+      )
         refIframe.current.children[1].contentWindow.postMessage(
           "reload-app",
           "*"
         );
-      }
-      // refImgWraper.current.children[1].contentWindow.postMessage(
-      //   "reload-app",
-      //   "*"
-      // );
-
-      // document
-      //   .querySelector(".tic_tac_toe_class")
-      //   .contentWindow.postMessage("reload-app", "*");
     };
+    // refImgWraper.current.children[1].contentWindow.postMessage(
+    //   "reload-app",
+    //   "*"
+    // );
+
+    // document
+    //   .querySelector(".tic_tac_toe_class")
+    //   .contentWindow.postMessage("reload-app", "*");
 
     const removeReloadButton = () =>
       refReloadBtn.current.classList.add("reload-button-display-none");
@@ -143,16 +144,7 @@ const InfoSection = ({
               </TextWrapper>
             </Column1>
             <Column2>
-              <IframeWrap ref={id === "web_shop" ? refIframe : null}>
-                {id === "tic_tac_toe" && (
-                  <ReloadBtn
-                    id="reload_btn"
-                    className="reload-button-display-none"
-                    ref={refReloadBtn}
-                  >
-                    <ImLoop2 />
-                  </ReloadBtn>
-                )}
+              <IframeWrap ref={refIframe}>
                 {!iframeRendered && (
                   <Spinner>
                     {" "}
@@ -172,6 +164,15 @@ const InfoSection = ({
                   position="relative"
                   onLoad={handleOnLoad}
                 />
+                {id === "tic_tac_toe" && (
+                  <ReloadBtn
+                    id="reload_btn"
+                    className="reload-button-display-none"
+                    ref={refReloadBtn}
+                  >
+                    <ImLoop2 />
+                  </ReloadBtn>
+                )}
               </IframeWrap>
               <BtnWrap id="btn_wrap_mobile">
                 <Button
