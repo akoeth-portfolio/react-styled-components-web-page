@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { Button } from "../ButtonElements";
+import { ButtonLink } from "../ButtonElements";
 import { Subtitle } from "./InfoElements";
 import { useHistory } from "react-router-dom";
 import { ImNewTab } from "react-icons/im";
@@ -126,7 +126,7 @@ const InfoSection = ({
                   ))}
                 </TechStack>
                 <BtnWrap id="btn_wrap_desktop">
-                  <Button
+                  <ButtonLink
                     smooth={true}
                     duration={500}
                     spy={true}
@@ -143,7 +143,7 @@ const InfoSection = ({
                     {id === "sliding_puzzle" && <FaGithub />}
                     {id === "web_shop" && <ImNewTab />}
                     {id === "blockchain" && <ImNewTab />}
-                  </Button>
+                  </ButtonLink>
                 </BtnWrap>
               </TextWrapper>
             </Column1>
@@ -184,7 +184,7 @@ const InfoSection = ({
                 </div>
               </IframeWrap>
               <BtnWrap id="btn_wrap_mobile">
-                <Button
+                <ButtonLink
                   smooth={true}
                   duration={500}
                   spy={true}
@@ -201,7 +201,7 @@ const InfoSection = ({
                   {id === "sliding_puzzle" && <FaGithub />}
                   {id === "web_shop" && <ImNewTab />}
                   {id === "blockchain" && <ImNewTab />}
-                </Button>
+                </ButtonLink>
               </BtnWrap>
             </Column2>
           </InfoRow>

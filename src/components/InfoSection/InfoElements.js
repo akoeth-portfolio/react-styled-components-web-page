@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const InfoContainer = styled.div`
   color: #fff;
   background: ${({ lightBg }) => (lightBg ? "#f9f9f9" : "#000000")};
-  /* height: 100vh; */
 
   @media screen and (max-width: 768px) {
     padding: 100px 0;
@@ -15,8 +14,6 @@ export const InfoRow = styled.div`
   display: grid;
   grid-column-gap: 2rem;
   grid-row-gap: 0rem;
-  /* grid-gap: 20px 50px; */
-  /* grid-row-gap: 2rem; */
   grid-auto-columns: minmax(auto 1fr);
   align-items: center;
   justify-content: center;
@@ -34,7 +31,6 @@ export const InfoRow = styled.div`
 `;
 
 export const Column1 = styled.div`
-  /* margin-bottom: 15px; */
   padding: 0 15px;
   grid-area: col1;
 `;
@@ -42,7 +38,6 @@ export const Column1 = styled.div`
 export const Column2 = styled.div`
   width: 100vw;
   margin-bottom: 15px;
-  /* padding: 0 15px; */
   grid-area: col2;
 
   @media only screen and (min-width: 768px) {
@@ -52,9 +47,7 @@ export const Column2 = styled.div`
 
 export const TextWrapper = styled.div`
   width: 100%;
-  /* max-width: 540px; */
   padding-top: 0;
-  /* padding-bottom: 60px; */
 `;
 
 export const TopLine = styled.div`
@@ -68,7 +61,6 @@ export const TopLine = styled.div`
 `;
 
 export const Heading = styled.h1`
-  /* color: #000; */
   margin-bottom: 24px;
   font-size: 2rem;
   line-height: 1.1;
@@ -81,7 +73,6 @@ export const Heading = styled.h1`
 `;
 
 export const Subtitle = styled.p`
-  /* max-width: 440px; */
   width: 100%;
   margin-bottom: 35px;
   font-size: 18px;
@@ -168,7 +159,6 @@ export const InfoWrapper = styled.div`
   max-width: 1100px;
   margin-right: auto;
   margin-left: auto;
-  /* padding: 0 24px; */
   justify-content: center;
 
   @media screen and (min-width: 1200px) {

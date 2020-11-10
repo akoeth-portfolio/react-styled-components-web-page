@@ -17,6 +17,7 @@ export const Nav = styled.nav`
   border-bottom-style: solid;
   border-bottom-color: white;
   border-bottom-width: 2px;
+  z-index: 999;
 
   @media screen and (max-width: 960px) {
     transition: 0.8 all ease;
