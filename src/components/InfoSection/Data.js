@@ -1,3 +1,9 @@
+import { FaReact } from "react-icons/fa";
+import { SiRedux } from "react-icons/si";
+import { FaNodeJs } from "react-icons/fa";
+import { DiMongodb } from "react-icons/di";
+import { SiSocketDotIo } from "react-icons/si";
+
 export const homeObjOne = {
   id: "about_me",
   className: "about_me_class",
@@ -29,7 +35,13 @@ export const homeObjTwo = {
   description:
     "This app features some of the most common user facing functionalities that can be found in modern webshop applications. It has been build using the MERN tech stack.",
   teckStackHeader: "Frameworks and Libraries:",
-  teckStack: "React.js, Redux, Node.js, Express, MongoDB",
+  teckStack: {
+    React: <FaReact />,
+    Redux: <SiRedux />,
+    Node: <FaNodeJs />,
+    Express: "ex",
+    MongoDB: <DiMongodb />,
+  },
   buttonLabel: "open in tab",
   buttonExternalTarget: "https://mern-stack-example-webshop.herokuapp.com/",
   imgStart: true,
@@ -50,7 +62,9 @@ export const homeObjThree = {
   description:
     "This little application challenges its users to slide each piece of the puzzle back in the correct position. Players can choose between numbers or a selection of images.",
   teckStackHeader: "Frameworks and Libraries:",
-  teckStack: "React.js",
+  teckStack: {
+    React: <FaReact />,
+  },
   buttonLabel: "see the code on github",
   buttonExternalTarget: "https://github.com/akoeth-portfolio/sliding-puzzle",
   imgStart: false,
@@ -71,7 +85,12 @@ export const homeObjFour = {
   description:
     "A classic implementation of the good old tic tac toe principle, this application enables its users to play against each other while having a little chat.",
   teckStackHeader: "Frameworks and Libraries:",
-  teckStack: "Node.js, Express, Socket io",
+  teckStack: {
+    React: <FaReact />,
+    Node: <FaNodeJs />,
+    Express: "ex",
+    "Socket io": <SiSocketDotIo />,
+  },
   buttonLabel: "see the code on github",
   buttonExternalTarget: "https://github.com/akoeth-portfolio/tic-tac-toe",
   imgStart: true,
@@ -92,7 +111,9 @@ export const homeObjFive = {
   description:
     "This app showcases some of the functionalities a blockchain has. By no means comprehensive, it nonetheless offers a tiny glimpse into the rapidly emerging world of blockchain technology.",
   teckStackHeader: "Frameworks and Libraries:",
-  teckStack: "React.js",
+  teckStack: {
+    React: <FaReact />,
+  },
   buttonLabel: "open in tab",
   buttonExternalTarget: "https://blockchain-demo-app.herokuapp.com/",
   imgStart: false,
@@ -100,4 +121,20 @@ export const homeObjFive = {
   dark: false,
   primary: false,
   darkText: true,
+};
+
+export const homeObjSix = {
+  id: "contact_form",
+  className: "contact_form_class",
+  lightBg: false,
+  lightText: true,
+  lightTextDesc: true,
+  // topLine: "Project No 4",
+  headLine: "Contact",
+  description: "Feel free to send me a message",
+  buttonLabel: "Send",
+  buttonExternalTarget: "https://blockchain-demo-app.herokuapp.com/",
+  dark: true,
+  primary: true,
+  darkText: false,
 };

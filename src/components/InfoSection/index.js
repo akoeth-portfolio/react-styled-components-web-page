@@ -40,9 +40,7 @@ const InfoSection = ({
   buttonLabel,
   buttonTarget,
   buttonExternalTarget,
-  img,
   url,
-  alt,
   primary,
   dark,
   dark2,
@@ -107,7 +105,26 @@ const InfoSection = ({
                 <TeckStackHeader darkText={darkText}>
                   {teckStackHeader}
                 </TeckStackHeader>
-                <TechStack darkText={darkText}>{teckStack}</TechStack>
+
+                <TechStack darkText={darkText}>
+                  {Object.entries(teckStack).map(([key, value]) => (
+                    <div style={{ display: "flex" }}>
+                      <div>
+                        <div
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                          }}
+                        >
+                          {value}&nbsp;
+                        </div>
+                      </div>
+                      <p>
+                        <td>&nbsp;{key}</td>
+                      </p>
+                    </div>
+                  ))}
+                </TechStack>
                 <BtnWrap id="btn_wrap_desktop">
                   <Button
                     smooth={true}
