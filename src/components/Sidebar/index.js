@@ -42,6 +42,11 @@ const SidebarElements = ({ isOpen, toggle }) => {
             Blockchain
           </SidebarLink>
         </SidebarMenu>
+        <SidebarMenu>
+          <SidebarLink to="contact" onClick={toggle}>
+            Contact
+          </SidebarLink>
+        </SidebarMenu>
       </SidebarWrapper>
     </SidebarContainer>
   );

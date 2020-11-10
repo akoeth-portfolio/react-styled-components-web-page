@@ -114,6 +114,19 @@ const Navbar = ({ toggle }) => {
                   Block Chain
                 </NavLinks>
               </NavItem>
+              <NavItem>
+                <NavLinks
+                  to="contact"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={scrollOffset}
+                  style={{ fontWeight: "bold" }}
+                >
+                  Contact{" "}
+                </NavLinks>
+              </NavItem>
             </NavMenu>
           </NavbarContainer>
         </Nav>

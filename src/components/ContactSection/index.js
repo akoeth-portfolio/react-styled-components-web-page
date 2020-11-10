@@ -3,6 +3,7 @@ import emailjs from "emailjs-com";
 import { RiMailSendLine } from "react-icons/ri";
 
 import {
+  ContactContainer,
   Form,
   ColumnRow,
   Column1,
@@ -12,20 +13,13 @@ import {
   SubjectLineInput,
   MessageInput,
   Button,
-  ResponeContainer,
+  ResponseContainer,
   Response,
   ResponseText,
+  ContactTextWrapper,
 } from "./ContactElements";
 
-import {
-  InfoContainer,
-  TextWrapper,
-  Heading,
-  Subtitle,
-  BtnWrap,
-} from "../InfoSection/InfoElements";
-
-import { ButtonLink } from "../ButtonElements";
+import { Heading, Subtitle, BtnWrap } from "../InfoSection/InfoElements";
 
 const ContactSection = ({
   lightText,
@@ -66,8 +60,8 @@ const ContactSection = ({
   const handleClick = () => setRenderResponse(false);
 
   return (
-    <InfoContainer>
-      <TextWrapper style={{ paddingTop: "7.5rem" }}>
+    <ContactContainer id="contact">
+      <ContactTextWrapper>
         {" "}
         <Heading lightText={lightText} style={{ textAlign: "center" }}>
           {headLine}
@@ -75,36 +69,18 @@ const ContactSection = ({
         <Subtitle lightText={lightText} style={{ textAlign: "center" }}>
           {description}
         </Subtitle>
-      </TextWrapper>
+      </ContactTextWrapper>
       <Form onSubmit={handleSubmit}>
-        <ResponeContainer
+        <ResponseContainer
           id="response_container"
           style={{ display: renderResponse ? "block" : "none" }}
         >
-          <Response>
+          <Response id="response" onClick={handleClick}>
             <ResponseText>
               Thank you for your message. I will be in touch very shortly.
             </ResponseText>
-            <BtnWrap
-              id="btn_wrap_desktop"
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                paddingTop: "2rem",
-                paddingBottom: "2rem",
-              }}
-            >
-              <ButtonLink
-                onClick={handleClick}
-                value="send"
-                primary={primary ? 1 : 0}
-                dark={dark ? 1 : 0}
-              >
-                Send another message
-              </ButtonLink>
-            </BtnWrap>
           </Response>
-        </ResponeContainer>{" "}
+        </ResponseContainer>{" "}
         <ColumnRow>
           <Column1>
             <NameInput placeholder="Enter your name" type="text" name="name" />
@@ -124,9 +100,10 @@ const ContactSection = ({
           name="subject"
         />
         <MessageInput
-          placeholder="Place your message here"
+          placeholder="Place your message here*"
           type="text"
           name="message"
+          required
         />
         <BtnWrap
           id="btn_wrap_desktop"
@@ -149,7 +126,7 @@ const ContactSection = ({
           </Button>
         </BtnWrap>
       </Form>{" "}
-    </InfoContainer>
+    </ContactContainer>
   );
 };
 

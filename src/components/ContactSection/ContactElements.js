@@ -1,7 +1,16 @@
 import styled from "styled-components";
 
+export const ContactContainer = styled.div`
+  color: #fff;
+  background: ${({ lightBg }) => (lightBg ? "#f9f9f9" : "#000000")};
+  height: 100vh;
+
+  @media screen and (max-width: 768px) {
+    padding: 100px 0;
+  }
+`;
+
 export const Form = styled.form`
-  top: 20%;
   text-align: center;
   width: 100%;
   margin: 0 auto;
@@ -16,28 +25,33 @@ export const Form = styled.form`
   }
 `;
 
-export const ResponeContainer = styled.div`
+export const ResponseContainer = styled.div`
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 1005;
-  background-color: rgba(10, 10, 10, 0.45);
+  background-color: rgba(10, 10, 10, 0.75);
 `;
 
 export const Response = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: rgba(10, 10, 10, 0.9);
-  margin-top: 3rem;
-  height: 8rem;
-  border-radius: 25px;
+  height: 10rem;
   border-style: solid;
   border-color: white;
   border-width: 1px;
+  width: 75%;
+  margin: 0 auto;
+  cursor: pointer;
+  margin-top: 3rem;
 `;
 
 export const ResponseText = styled.div`
-  padding-top: 1rem;
+  padding: 1rem;
   color: white;
   font-size: 1em;
   font-weight: bold;
@@ -109,5 +123,19 @@ export const Button = styled.button`
   &:hover {
     transition: all 0.2s ease-in-out;
     background: ${({ primary }) => (primary ? "#fff" : "#01BF71")};
+  }
+`;
+
+export const ContactTextWrapper = styled.div`
+  width: 100%;
+  padding-top: 0;
+  padding-top: 1.5rem;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 4rem;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 15rem;
   }
 `;
