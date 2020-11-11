@@ -19,8 +19,9 @@ const Navbar = ({ toggle }) => {
   const [scrollOffset, setScrollOffset] = useState(-80);
 
   useEffect(() => {
+    console.log(window.screen.width);
     if (window.screen.width >= 768 && window.screen.width <= 992)
-      setScrollOffset(60);
+      setScrollOffset(-30);
 
     if (window.screen.width > 1200) setScrollOffset(-80);
   }, []);
