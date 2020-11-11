@@ -57,9 +57,17 @@ export const HeroContent = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media screen and (min-width: 550px) {
+  /* @media screen and (min-width: 550px) {
+    top: 4rem;
+  } */
+
+  @media only screen and (min-width: 550px) and (max-width: 599px) {
     top: 4rem;
   }
+
+  /* @media screen and (min-width: 600px) {
+    top: 10rem;
+  } */
 `;
 
 export const HeroH1 = styled.h1`
