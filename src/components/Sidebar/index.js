@@ -16,7 +16,7 @@ const SidebarElements = ({ isOpen, toggle }) => {
       <Icon onClick={toggle}>
         <CloseIcon />
       </Icon>
-      <SidebarWrapper>
+      <SidebarWrapper id="sidebar_wrapper">
         <SidebarMenu>
           <SidebarLink to="about_me" onClick={toggle}>
             About
