@@ -61,7 +61,7 @@ const ContactSection = ({
 
   return (
     <ContactContainer id="contact">
-      <ContactTextWrapper>
+      <ContactTextWrapper id="contact_text_wrapper">
         {" "}
         <Heading lightText={lightText} style={{ textAlign: "center" }}>
           {headLine}
@@ -70,7 +70,7 @@ const ContactSection = ({
           {description}
         </Subtitle>
       </ContactTextWrapper>
-      <Form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit} id="form">
         <ResponseContainer
           id="response_container"
           style={{ display: renderResponse ? "block" : "none" }}

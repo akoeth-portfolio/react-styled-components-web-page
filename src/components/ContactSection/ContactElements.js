@@ -3,12 +3,17 @@ import styled from "styled-components";
 export const ContactContainer = styled.div`
   color: #fff;
   background: ${({ lightBg }) => (lightBg ? "#f9f9f9" : "#000000")};
-  /* height: 100vh; */
   padding-top: 6rem;
+  min-height: 100vh;
+  max-height: auto;
 
   @media screen and (min-width: 768px) {
     padding-top: 10rem;
-    height: 100vh;
+  }
+
+  @media screen and (min-width: 900px) {
+    padding-top: 5rem;
+    height: auto;
   }
 `;
 
