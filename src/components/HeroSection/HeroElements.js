@@ -65,9 +65,9 @@ export const HeroContent = styled.div`
     top: 4rem;
   }
 
-  /* @media screen and (min-width: 600px) {
-    top: 10rem;
-  } */
+  @media screen and (min-width: 768px) {
+    top: 6rem;
+  }
 `;
 
 export const HeroH1 = styled.h1`
