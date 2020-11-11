@@ -158,7 +158,7 @@ const InfoSection = ({
                     />
                   </Spinner>
                 )}
-                <div ref={refIframe}>
+                <div ref={refIframe} style={{ position: "relative" }}>
                   <Iframe
                     id={id}
                     className={className}

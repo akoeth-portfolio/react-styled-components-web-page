@@ -146,7 +146,7 @@ export const ImgWrap = styled.div`
 `;
 
 export const IframeWrap = styled.div`
-  /* position: relative; */
+  position: relative;
   margin-bottom: 3rem;
 
   @media only screen and (min-width: 600px) {
@@ -169,7 +169,7 @@ export const Img = styled.img`
 export const Spinner = styled.div`
   width: 100%;
   height: 450px;
-  /* position: absolute; */
+  position: absolute;
   z-index: 99;
   display: flex;
   justify-content: center;
@@ -178,8 +178,9 @@ export const Spinner = styled.div`
 `;
 
 export const ReloadBtn = styled.button`
-  /* position: absolute; */
+  position: absolute;
   left: 0;
+  top: 0;
   z-index: 2 !important;
   font-size: 4rem;
   color: white;

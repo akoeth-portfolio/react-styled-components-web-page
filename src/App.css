@@ -64,6 +64,7 @@
   }
 }
 
+/* components/InfoSection/InfoElements.js */
 .reload-button-display-none {
-  display: none;
+  display: block;
 }
