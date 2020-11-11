@@ -41,7 +41,7 @@ const InfoSection = ({
       setScrollOffset(0);
 
     if (window.screen.width >= 768 && window.screen.width <= 992)
-      setScrollOffset(60);
+      setScrollOffset(-20);
 
     if (window.screen.width > 1200) setScrollOffset(-80);
   }, []);
