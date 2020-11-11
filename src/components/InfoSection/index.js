@@ -95,10 +95,10 @@ const InfoSection = ({
   return (
     <>
       <InfoContainer lightBg={lightBg} id={id}>
-        <InfoWrapper>
-          <InfoRow imgStart={imgStart}>
-            <Column1>
-              <TextWrapper>
+        <InfoWrapper id="info_wrapper">
+          <InfoRow id="info_row" imgStart={imgStart}>
+            <Column1 id="column_1">
+              <TextWrapper id="text_wrapper">
                 <TopLine>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headLine}</Heading>
                 <Subtitle darkText={darkText}>{description}</Subtitle>
@@ -147,8 +147,8 @@ const InfoSection = ({
                 </BtnWrap>
               </TextWrapper>
             </Column1>
-            <Column2>
-              <IframeWrap>
+            <Column2 id="column_2">
+              <IframeWrap id="iframe_wrap">
                 {!iframeRendered && (
                   <Spinner>
                     {" "}
@@ -182,27 +182,27 @@ const InfoSection = ({
                     </ReloadBtn>
                   )}
                 </div>
+                <BtnWrap id="btn_wrap_mobile">
+                  <ButtonLink
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact="true"
+                    offset={-80}
+                    primary={primary ? 1 : 0}
+                    dark={dark ? 1 : 0}
+                    dark2={dark2 ? 1 : 0}
+                    onClick={() => handleClick()}
+                  >
+                    {" "}
+                    {buttonLabel}&nbsp;
+                    {id === "tic_tac_toe" && <FaGithub />}
+                    {id === "sliding_puzzle" && <FaGithub />}
+                    {id === "web_shop" && <ImNewTab />}
+                    {id === "blockchain" && <ImNewTab />}
+                  </ButtonLink>
+                </BtnWrap>
               </IframeWrap>
-              <BtnWrap id="btn_wrap_mobile">
-                <ButtonLink
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                  primary={primary ? 1 : 0}
-                  dark={dark ? 1 : 0}
-                  dark2={dark2 ? 1 : 0}
-                  onClick={() => handleClick()}
-                >
-                  {" "}
-                  {buttonLabel}&nbsp;
-                  {id === "tic_tac_toe" && <FaGithub />}
-                  {id === "sliding_puzzle" && <FaGithub />}
-                  {id === "web_shop" && <ImNewTab />}
-                  {id === "blockchain" && <ImNewTab />}
-                </ButtonLink>
-              </BtnWrap>
             </Column2>
           </InfoRow>
         </InfoWrapper>

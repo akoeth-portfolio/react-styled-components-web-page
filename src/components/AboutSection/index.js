@@ -41,13 +41,17 @@ const InfoSection = ({
   return (
     <>
       <InfoContainer lightBg={lightBg} id={id}>
-        <InfoWrapper>
-          <InfoRow imgStart={imgStart}>
-            <Column1>
-              <TextWrapper>
-                <TopLine>{topLine}</TopLine>
-                <Heading lightText={lightText}>{headLine}</Heading>
-                <Subtitle darkText={darkText}>{description}</Subtitle>
+        <InfoWrapper id="info_wrapper">
+          <InfoRow id="info_row" imgStart={imgStart}>
+            <Column1 id="column_1">
+              <TextWrapper id="text_wrapper">
+                <TopLine id="top_line">{topLine}</TopLine>
+                <Heading id="heading" lightText={lightText}>
+                  {headLine}
+                </Heading>
+                <Subtitle id="subtitle" darkText={darkText}>
+                  {description}
+                </Subtitle>
 
                 <BtnWrap id="about_btn_wrap_desktop">
                   <NavBtn>
@@ -57,7 +61,7 @@ const InfoSection = ({
                       duration={500}
                       spy={true}
                       exact="true"
-                      offset={-80}
+                      offset={0}
                       onMouseEnter={onHover}
                       onMouseLeave={onHover}
                     >

@@ -1,12 +1,32 @@
 import styled from "styled-components";
 
 export const InfoContainer = styled.div`
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #fff;
+  min-height: 100vh;
+  max-height: auto;
   background: ${({ lightBg }) => (lightBg ? "#f9f9f9" : "#000000")};
-  padding: 5.5rem 0;
 
   @media screen and (min-width: 600px) {
     padding: 3rem 0;
+  }
+`;
+
+export const InfoWrapper = styled.div`
+  display: grid;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  max-width: 1100px;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
+
+  @media screen and (min-width: 1200px) {
+    height: 900px;
   }
 `;
 
@@ -47,8 +67,8 @@ export const Column2 = styled.div`
 `;
 
 export const TextWrapper = styled.div`
-  width: 100%;
-  padding-top: 0;
+  margin-top: 6rem;
+  margin-bottom: 2rem;
 `;
 
 export const TopLine = styled.div`
@@ -108,7 +128,7 @@ export const BtnWrap = styled.div`
 `;
 
 export const ImgWrap = styled.div`
-  position: relative;
+  /* position: relative; */
 
   @media only screen and (min-width: 600px) {
     width: 100%;
@@ -122,7 +142,8 @@ export const ImgWrap = styled.div`
 `;
 
 export const IframeWrap = styled.div`
-  position: relative;
+  /* position: relative; */
+  margin-bottom: 3rem;
 
   @media only screen and (min-width: 600px) {
     width: 100%;
@@ -144,7 +165,7 @@ export const Img = styled.img`
 export const Spinner = styled.div`
   width: 100%;
   height: 450px;
-  position: absolute;
+  /* position: absolute; */
   z-index: 99;
   display: flex;
   justify-content: center;
@@ -152,23 +173,8 @@ export const Spinner = styled.div`
   background-color: rgba(232, 224, 223, 0.75);
 `;
 
-export const InfoWrapper = styled.div`
-  display: grid;
-  z-index: 1;
-  height: 1000px;
-  width: 100%;
-  max-width: 1100px;
-  margin-right: auto;
-  margin-left: auto;
-  justify-content: center;
-
-  @media screen and (min-width: 1200px) {
-    height: 900px;
-  }
-`;
-
 export const ReloadBtn = styled.button`
-  position: absolute;
+  /* position: absolute; */
   left: 0;
   z-index: 2 !important;
   font-size: 4rem;
