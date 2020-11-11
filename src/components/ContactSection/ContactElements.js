@@ -4,9 +4,10 @@ export const ContactContainer = styled.div`
   color: #fff;
   background: ${({ lightBg }) => (lightBg ? "#f9f9f9" : "#000000")};
   height: 100vh;
+  padding-top: 6rem;
 
-  @media screen and (max-width: 768px) {
-    padding: 100px 0;
+  @media screen and (min-width: 768px) {
+    padding-top: 10rem;
   }
 `;
 
@@ -129,13 +130,4 @@ export const Button = styled.button`
 export const ContactTextWrapper = styled.div`
   width: 100%;
   padding-top: 0;
-  padding-top: 1.5rem;
-
-  @media screen and (min-width: 768px) {
-    padding-top: 4rem;
-  }
-
-  @media screen and (min-width: 1200px) {
-    padding-top: 15rem;
-  }
 `;
