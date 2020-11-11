@@ -129,7 +129,6 @@ export const homeObjSix = {
   lightBg: false,
   lightText: true,
   lightTextDesc: true,
-  // topLine: "Project No 4",
   headLine: "Contact",
   description: "Feel free to send me a message",
   buttonLabel: "Send",

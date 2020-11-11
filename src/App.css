@@ -6,7 +6,7 @@
 }
 
 /* About me container */
-#about_me {
+/* #about_me {
   padding-top: 0;
   height: 40rem;
 }
@@ -16,7 +16,7 @@
     padding-top: 0;
     height: 26rem;
   }
-}
+} */
 
 /* Tic Tac Toe Iframe */
 @media only screen and (min-width: 600px) {

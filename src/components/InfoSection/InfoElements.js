@@ -69,6 +69,10 @@ export const Column2 = styled.div`
 export const TextWrapper = styled.div`
   margin-top: 6rem;
   margin-bottom: 2rem;
+
+  @media only screen and (min-width: 600px) {
+    margin-top: 3rem;
+  }
 `;
 
 export const TopLine = styled.div`
