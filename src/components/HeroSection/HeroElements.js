@@ -56,10 +56,6 @@ export const HeroContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  @media screen and (min-width: 600px) {
-    top: 7rem;
-  }
 `;
 
 export const HeroH1 = styled.h1`
