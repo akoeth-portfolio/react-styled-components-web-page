@@ -68,6 +68,10 @@ export const HeroContent = styled.div`
   @media screen and (min-width: 768px) {
     top: 6rem;
   }
+
+  @media screen and (min-width: 1200px) {
+    top: 10rem;
+  }
 `;
 
 export const HeroH1 = styled.h1`
