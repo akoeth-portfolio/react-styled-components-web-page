@@ -16,7 +16,7 @@ import {
 const HeroSection = () => {
   const [hover, setHover] = useState(false);
 
-  const [scrollOffset, setScrollOffset] = useState(-80);
+  const [scrollOffset, setScrollOffset] = useState(0);
 
   useEffect(() => {
     if (window.screen.width >= 600 && window.screen.width <= 768)
