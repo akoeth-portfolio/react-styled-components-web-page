@@ -23,7 +23,7 @@ const Navbar = ({ toggle }) => {
     if (window.screen.width >= 768 && window.screen.width <= 992)
       setScrollOffset(-30);
 
-    if (window.screen.width > 1200) setScrollOffset(-80);
+    if (window.screen.width > 1200) setScrollOffset(-40);
   }, []);
 
   // if screen is in mobile landscape mode navbar is transparent, disappears on scroll down and reappears on scroll up

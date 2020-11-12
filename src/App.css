@@ -58,11 +58,11 @@
   }
 }
 
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
   #info_section_image {
     display: none;
   }
-}
+} */
 
 /* components/InfoSection/InfoElements.js */
 .reload-button-display-none {

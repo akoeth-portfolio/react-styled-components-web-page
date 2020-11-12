@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
 export const InfoContainer = styled.div`
-  /* position: relative; */
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
   color: #fff;
   min-height: 100vh;
   max-height: auto;
@@ -14,9 +13,9 @@ export const InfoContainer = styled.div`
     padding: 3rem 0;
   }
 
-  /* @media screen and (min-width: 600px) {
-    height: 100vh;
-  } */
+  @media screen and (min-width: 992px) {
+    padding-top: 8rem;
+  }
 `;
 
 export const InfoWrapper = styled.div`
@@ -35,23 +34,24 @@ export const InfoWrapper = styled.div`
 `;
 
 export const InfoRow = styled.div`
-  width: 100vw;
   display: grid;
-  grid-column-gap: 2rem;
-  grid-row-gap: 0rem;
-  grid-auto-columns: minmax(auto 1fr);
-  align-items: center;
-  justify-content: center;
+  grid-column-gap: 3rem;
+  /* grid-row-gap: 2rem; */
+  /* width: 100vw; */
+  /* align-items: center; */
+  /* justify-content: center; */
   grid-template-areas: ${({ imgStart }) =>
     imgStart ? `'col2 col1'` : `'col1 col2'`};
 
-  @media screen and (max-width: 992px) {
-    grid-template-areas: ${({ imgStart }) =>
-      imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`};
-  }
-
   @media only screen and (min-width: 768px) {
     width: 100%;
+  }
+
+  @media screen and (max-width: 992px) {
+    /* grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(100%, auto);  */
+    grid-template-areas: ${({ imgStart }) =>
+      imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`};
   }
 `;
 
@@ -76,6 +76,11 @@ export const TextWrapper = styled.div`
 
   @media only screen and (min-width: 600px) {
     margin-top: 3rem;
+  }
+
+  @media only screen and (min-width: 992px) {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 `;
 
@@ -161,6 +166,7 @@ export const IframeWrap = styled.div`
   @media only screen and (min-width: 992px) {
     width: 555px;
     height: 100%;
+    padding-top: 2rem;
   }
 `;
 
@@ -168,6 +174,10 @@ export const Img = styled.img`
   width: 100%;
   margin: 0 0 10px 0;
   padding-right: 0;
+
+  @media only screen and (max-width: 992px) {
+    display: none;
+  }
 `;
 
 export const Spinner = styled.div`
