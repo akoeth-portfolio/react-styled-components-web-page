@@ -14,9 +14,9 @@ export const InfoContainer = styled.div`
     padding: 3rem 0;
   }
 
-  @media screen and (min-width: 600px) {
+  /* @media screen and (min-width: 600px) {
     height: 100vh;
-  }
+  } */
 `;
 
 export const InfoWrapper = styled.div`
