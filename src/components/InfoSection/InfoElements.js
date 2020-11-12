@@ -45,7 +45,7 @@ export const InfoRow = styled.div`
   grid-template-areas: ${({ imgStart }) =>
     imgStart ? `'col2 col1'` : `'col1 col2'`};
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 992px) {
     grid-template-areas: ${({ imgStart }) =>
       imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`};
   }
@@ -158,7 +158,7 @@ export const IframeWrap = styled.div`
     height: 100%;
   }
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 992px) {
     width: 555px;
     height: 100%;
   }
