@@ -11,7 +11,7 @@ import {
   NavLinks,
 } from "./NavbarElements";
 
-const Navbar = ({ toggle }) => {
+const Navbar = ({ toggle, legalStuff }) => {
   const [renderNavbar, setRenderNavbar] = useState(true);
 
   const [navbarTransparency, setNavbarTransparency] = useState(false);
@@ -51,84 +51,89 @@ const Navbar = ({ toggle }) => {
             <NavLogo to="/" onClick={toggleHome}>
               portfolio
             </NavLogo>
-            <MobileIcon onClick={toggle}>
-              <FaBars />
-            </MobileIcon>
-            <NavMenu>
-              <NavItem>
-                <NavLinks
-                  to="about_me"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={scrollOffset}
-                >
-                  About
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="web_shop"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={scrollOffset}
-                >
-                  Web Shop
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="sliding_puzzle"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={scrollOffset}
-                >
-                  Sliding Puzzle
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="tic_tac_toe"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={scrollOffset}
-                >
-                  Tic Tac Toe
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="blockchain"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={scrollOffset}
-                >
-                  Block Chain
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="contact"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={scrollOffset}
-                  style={{ fontWeight: "bold" }}
-                >
-                  Contact{" "}
-                </NavLinks>
-              </NavItem>
-            </NavMenu>
+
+            {!legalStuff && (
+              <MobileIcon onClick={toggle}>
+                <FaBars />
+              </MobileIcon>
+            )}
+            {!legalStuff && (
+              <NavMenu>
+                <NavItem>
+                  <NavLinks
+                    to="about_me"
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact="true"
+                    offset={scrollOffset}
+                  >
+                    About
+                  </NavLinks>
+                </NavItem>
+                <NavItem>
+                  <NavLinks
+                    to="web_shop"
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact="true"
+                    offset={scrollOffset}
+                  >
+                    Web Shop
+                  </NavLinks>
+                </NavItem>
+                <NavItem>
+                  <NavLinks
+                    to="sliding_puzzle"
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact="true"
+                    offset={scrollOffset}
+                  >
+                    Sliding Puzzle
+                  </NavLinks>
+                </NavItem>
+                <NavItem>
+                  <NavLinks
+                    to="tic_tac_toe"
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact="true"
+                    offset={scrollOffset}
+                  >
+                    Tic Tac Toe
+                  </NavLinks>
+                </NavItem>
+                <NavItem>
+                  <NavLinks
+                    to="blockchain"
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact="true"
+                    offset={scrollOffset}
+                  >
+                    Block Chain
+                  </NavLinks>
+                </NavItem>
+                <NavItem>
+                  <NavLinks
+                    to="contact"
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact="true"
+                    offset={scrollOffset}
+                    style={{ fontWeight: "bold" }}
+                  >
+                    Contact{" "}
+                  </NavLinks>
+                </NavItem>
+              </NavMenu>
+            )}
           </NavbarContainer>
         </Nav>
       )}

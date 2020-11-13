@@ -6,7 +6,7 @@ export const InfoContainer = styled.div`
   align-items: center; */
   color: #fff;
   min-height: 100vh;
-  max-height: auto;
+  /* max-height: auto; */
   background: ${({ lightBg }) => (lightBg ? "#f9f9f9" : "#000000")};
 
   @media screen and (min-width: 600px) {
