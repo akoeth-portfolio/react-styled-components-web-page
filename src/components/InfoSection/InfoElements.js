@@ -29,7 +29,7 @@ export const InfoWrapper = styled.div`
   justify-content: center;
 
   @media screen and (min-width: 1200px) {
-    height: 900px;
+    /* height: 900px; */
   }
 `;
 

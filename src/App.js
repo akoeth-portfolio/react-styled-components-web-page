@@ -3,7 +3,7 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages";
-import PrivacyPolicy from "./components/LegalStuff/PrivacyPolicy";
+import PrivacyPolicyGerman from "./components/LegalStuff/PrivacyPolicyGerman";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +17,7 @@ function App() {
         <Navbar toggle={toggle} legalStuff={true} />
         <Switch>
           <Route path="/" component={Home} exact />
-          <Route path="/privacy_policy" component={PrivacyPolicy} exact />
+          <Route path="/privacy_policy" component={PrivacyPolicyGerman} exact />
         </Switch>
       </Router>
     </div>
