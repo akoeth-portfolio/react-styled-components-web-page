@@ -118,14 +118,19 @@ export const NavBtnLink = styled(LinkS)`
 `;
 
 export const LangContainer = styled.div`
+  position: absolute;
   display: flex;
   flex-direction: row;
   align-items: center;
   cursor: pointer;
+  /* margin-right: 1rem; */
+  right: 7rem;
+  width: 1rem;
+  height: 100%;
 
-  @media screen and (max-width: 992px) {
+  /* @media screen and (max-width: 992px) {
     display: none;
-  }
+  } */
 `;
 
 export const LangImg = styled.img`

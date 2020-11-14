@@ -64,6 +64,7 @@ export const Column2 = styled.div`
   width: 100vw;
   margin-bottom: 15px;
   grid-area: col2;
+  padding: 0 15px;
 
   @media only screen and (min-width: 768px) {
     width: 100%;

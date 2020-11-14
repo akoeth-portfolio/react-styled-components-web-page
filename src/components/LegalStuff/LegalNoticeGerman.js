@@ -51,12 +51,7 @@ const LegalNoticeGerman = () => {
               <p>
                 <b>Berufsbezeichnung:</b>
               </p>
-              <p> Webentwickler</p>
-              <br />
-              <p>
-                Quelle: Erstellt mit dem Impressum Generator von AdSimple in
-                Kooperation mit slashtechnik.de
-              </p>
+              <p>Webentwickler</p>
               <br />
               <h3>EU-Streitschlichtung</h3>
               <br />

@@ -14,7 +14,7 @@ function LegalNoticeEnglish() {
       <InfoWrapper className="info_wrapper_class">
         <InfoRow className="info_row_class">
           <Column1>
-            <TextWrapper>
+            <TextWrapper className="column1_text_wrapper">
               <h1>Legal Notice</h1>
               <br />
               <h2>Duty to inform according to § 5 TMG.</h2>
@@ -75,7 +75,7 @@ function LegalNoticeEnglish() {
           </Column1>
 
           <Column2>
-            <TextWrapper>
+            <TextWrapper className="column2_text_wrapper">
               <h3>Liability for contents of this website</h3>
               <br />
               <p>

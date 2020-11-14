@@ -9,13 +9,7 @@ import {
   NavMenu,
   NavItem,
   NavLinks,
-  LangContainer,
-  LangImg,
-  LangName,
 } from "./NavbarElements";
-
-import LangGerFlag from "../../images/germany-flag.png";
-import LangUKFlag from "../../images/uk-flag.png";
 
 const Navbar = ({ toggle, legalStuff, changeLanguage }) => {
   // if screen is in mobile landscape mode navbar is transparent, disappears on scroll down and reappears on scroll up
@@ -51,14 +45,6 @@ const Navbar = ({ toggle, legalStuff, changeLanguage }) => {
   // if click on portfolio in navbar scroll all the way up to top of page
   const toggleHome = () => scroll.scrollToTop();
 
-  // language settings
-  const [ukFlag, setUkFlag] = useState(true);
-
-  const changeFlag = () => {
-    setUkFlag(!ukFlag);
-    changeLanguage();
-  };
-
   return (
     <>
       {renderNavbar && (
@@ -68,94 +54,85 @@ const Navbar = ({ toggle, legalStuff, changeLanguage }) => {
               portfolio
             </NavLogo>
 
-            {!legalStuff && (
-              <MobileIcon onClick={toggle}>
-                <FaBars />
-              </MobileIcon>
-            )}
-            {!legalStuff && (
-              <NavMenu id="nav_menu">
-                <NavItem>
-                  <NavLinks
-                    to="about_me"
-                    smooth={true}
-                    duration={500}
-                    spy={true}
-                    exact="true"
-                    offset={scrollOffset}
-                  >
-                    About
-                  </NavLinks>
-                </NavItem>
-                <NavItem>
-                  <NavLinks
-                    to="web_shop"
-                    smooth={true}
-                    duration={500}
-                    spy={true}
-                    exact="true"
-                    offset={scrollOffset}
-                  >
-                    Web Shop
-                  </NavLinks>
-                </NavItem>
-                <NavItem>
-                  <NavLinks
-                    to="sliding_puzzle"
-                    smooth={true}
-                    duration={500}
-                    spy={true}
-                    exact="true"
-                    offset={scrollOffset}
-                  >
-                    Sliding Puzzle
-                  </NavLinks>
-                </NavItem>
-                <NavItem>
-                  <NavLinks
-                    to="tic_tac_toe"
-                    smooth={true}
-                    duration={500}
-                    spy={true}
-                    exact="true"
-                    offset={scrollOffset}
-                  >
-                    Tic Tac Toe
-                  </NavLinks>
-                </NavItem>
-                <NavItem>
-                  <NavLinks
-                    to="blockchain"
-                    smooth={true}
-                    duration={500}
-                    spy={true}
-                    exact="true"
-                    offset={scrollOffset}
-                  >
-                    Block Chain
-                  </NavLinks>
-                </NavItem>
-                <NavItem>
-                  <NavLinks
-                    to="contact"
-                    smooth={true}
-                    duration={500}
-                    spy={true}
-                    exact="true"
-                    offset={scrollOffset}
-                    style={{ fontWeight: "bold" }}
-                  >
-                    Contact{" "}
-                  </NavLinks>
-                </NavItem>
-              </NavMenu>
-            )}
-            {legalStuff && (
-              <LangContainer id="lang_container" onClick={changeFlag}>
-                <LangImg src={ukFlag ? LangUKFlag : LangGerFlag} alt="flag" />
-                <LangName>&nbsp;{ukFlag ? "English" : "Deutsch"}</LangName>
-              </LangContainer>
-            )}
+            <MobileIcon onClick={toggle}>
+              <FaBars />
+            </MobileIcon>
+
+            <NavMenu id="nav_menu">
+              <NavItem>
+                <NavLinks
+                  to="about_me"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={scrollOffset}
+                >
+                  About
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks
+                  to="web_shop"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={scrollOffset}
+                >
+                  Web Shop
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks
+                  to="sliding_puzzle"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={scrollOffset}
+                >
+                  Sliding Puzzle
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks
+                  to="tic_tac_toe"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={scrollOffset}
+                >
+                  Tic Tac Toe
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks
+                  to="blockchain"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={scrollOffset}
+                >
+                  Block Chain
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks
+                  to="contact"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={scrollOffset}
+                  style={{ fontWeight: "bold" }}
+                >
+                  Contact{" "}
+                </NavLinks>
+              </NavItem>
+            </NavMenu>
           </NavbarContainer>
         </Nav>
       )}
