@@ -30,7 +30,7 @@ export const NavbarContainer = styled.div`
   height: 80px;
   z-index: 1;
   width: 100%;
-  padding: 0 24px;
+  /* padding: 0 24px; */
   max-width: 1100px;
 `;
 
@@ -115,4 +115,23 @@ export const NavBtnLink = styled(LinkS)`
     background: #01bf71;
     color: white;
   }
+`;
+
+export const LangContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+
+  @media screen and (max-width: 992px) {
+    display: none;
+  }
+`;
+
+export const LangImg = styled.img`
+  width: 1.5em;
+`;
+
+export const LangName = styled.div`
+  color: white;
 `;

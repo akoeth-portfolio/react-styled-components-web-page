@@ -6,6 +6,7 @@ const Footer = () => {
   return (
     <FooterContainer>
       <Link to={"/privacy_policy"}>Privacy Policy</Link>
+      <Link to={"/legal_notice"}>Legal Notice</Link>
     </FooterContainer>
   );
 };

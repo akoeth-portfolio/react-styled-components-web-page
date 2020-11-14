@@ -9,25 +9,21 @@ import {
   NavMenu,
   NavItem,
   NavLinks,
+  LangContainer,
+  LangImg,
+  LangName,
 } from "./NavbarElements";
 
-const Navbar = ({ toggle, legalStuff }) => {
+import LangGerFlag from "../../images/germany-flag.png";
+import LangUKFlag from "../../images/uk-flag.png";
+
+const Navbar = ({ toggle, legalStuff, changeLanguage }) => {
+  // if screen is in mobile landscape mode navbar is transparent, disappears on scroll down and reappears on scroll up
+  // on scroll to topmost postion navbar is opaque
   const [renderNavbar, setRenderNavbar] = useState(true);
 
   const [navbarTransparency, setNavbarTransparency] = useState(false);
 
-  const [scrollOffset, setScrollOffset] = useState(-80);
-
-  useEffect(() => {
-    console.log(window.screen.width);
-    if (window.screen.width >= 768 && window.screen.width <= 992)
-      setScrollOffset(-30);
-
-    if (window.screen.width > 1200) setScrollOffset(-40);
-  }, []);
-
-  // if screen is in mobile landscape mode navbar is transparent, disappears on scroll down and reappears on scroll up
-  // on scroll to topmost postion navbar is opaque
   window.onscroll = function (e) {
     if (window.screen.width >= 598 && window.screen.width <= 768) {
       window.scrollY <= 100
@@ -41,7 +37,27 @@ const Navbar = ({ toggle, legalStuff }) => {
     }
   };
 
+  // sets offset scroll to section in accordance with screen width
+  const [scrollOffset, setScrollOffset] = useState(-80);
+
+  useEffect(() => {
+    console.log(window.screen.width);
+    if (window.screen.width >= 768 && window.screen.width <= 992)
+      setScrollOffset(-30);
+
+    if (window.screen.width > 1200) setScrollOffset(-40);
+  }, []);
+
+  // if click on portfolio in navbar scroll all the way up to top of page
   const toggleHome = () => scroll.scrollToTop();
+
+  // language settings
+  const [ukFlag, setUkFlag] = useState(true);
+
+  const changeFlag = () => {
+    setUkFlag(!ukFlag);
+    changeLanguage();
+  };
 
   return (
     <>
@@ -58,7 +74,7 @@ const Navbar = ({ toggle, legalStuff }) => {
               </MobileIcon>
             )}
             {!legalStuff && (
-              <NavMenu>
+              <NavMenu id="nav_menu">
                 <NavItem>
                   <NavLinks
                     to="about_me"
@@ -133,6 +149,12 @@ const Navbar = ({ toggle, legalStuff }) => {
                   </NavLinks>
                 </NavItem>
               </NavMenu>
+            )}
+            {legalStuff && (
+              <LangContainer id="lang_container" onClick={changeFlag}>
+                <LangImg src={ukFlag ? LangUKFlag : LangGerFlag} alt="flag" />
+                <LangName>&nbsp;{ukFlag ? "English" : "Deutsch"}</LangName>
+              </LangContainer>
             )}
           </NavbarContainer>
         </Nav>

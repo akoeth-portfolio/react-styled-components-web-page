@@ -34,18 +34,6 @@ const InfoSection = ({
 }) => {
   const [hover, setHover] = useState(false);
 
-  // const [scrollOffset, setScrollOffset] = useState(0);
-
-  // useEffect(() => {
-  //   if (window.screen.width >= 600 && window.screen.width <= 768)
-  //     setScrollOffset(0);
-
-  //   if (window.screen.width >= 768 && window.screen.width <= 992)
-  //     setScrollOffset(-20);
-
-  //   if (window.screen.width > 1200) setScrollOffset(-80);
-  // }, []);
-
   const onHover = () => {
     setHover(!hover);
   };

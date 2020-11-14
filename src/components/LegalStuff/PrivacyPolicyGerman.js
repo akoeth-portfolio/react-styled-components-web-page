@@ -754,6 +754,7 @@ function PrivacyPolicyGerman() {
               </p>
               <br />
               <h3>Was ist Stripe?</h3>
+              <br />
               <p>
                 Das Technologieunternehmen Stripe bietet Zahlungslösungen für
                 Online-Bezahlungen an. Mit Stripe ist es möglich Kredit- und
@@ -763,6 +764,7 @@ function PrivacyPolicyGerman() {
                 unsere Website bzw. den Shop verlassen müssen und die
                 Zahlungsabwicklung sehr schnell erfolgt.
               </p>
+              <br />
               <h3> Warum verwenden wir Stripe für unsere Website?</h3>
               <br />
               <p>
