@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { animateScroll as scroll } from "react-scroll";
 import {
   Nav,
   NavbarContainer,

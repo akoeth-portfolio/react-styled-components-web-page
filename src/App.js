@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import LegalStuffNavBar from "./components/LegalStuff/LegalStuffNavBar";
+// import LegalStuffNavBar from "./components/LegalStuff/LegalStuffNavBar";
 import Home from "./pages";
 import PrivacyPolicy from "./components/LegalStuff/PrivacyPolicy";
 import LegalNotice from "./components/LegalStuff/LegalNotice";
@@ -9,9 +9,9 @@ import LegalNotice from "./components/LegalStuff/LegalNotice";
 function App() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggle = () => {
-    setIsOpen(!isOpen);
-  };
+  // const toggle = () => {
+  //   setIsOpen(!isOpen);
+  // };
 
   return (
     <div>
