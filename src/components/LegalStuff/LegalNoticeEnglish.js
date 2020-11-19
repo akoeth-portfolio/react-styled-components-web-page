@@ -15,37 +15,26 @@ function LegalNoticeEnglish() {
         <InfoRow className="info_row_class">
           <Column1>
             <TextWrapper className="column1_text_wrapper">
-              <h1>Legal Notice</h1>
+              <h3>Legal Notice</h3>
               <br />
-              <h2>Duty to inform according to § 5 TMG.</h2>
+              <h4>Duty to inform according to § 5 TMG</h4>
               <br />
-              <p>Sample company Musterstrasse 1</p>
-              <p>Staircase 1 door 1, 12345 Musterhausen,</p>
+              <p>Andreas Köth Ecksteinstraße 29</p>
+              <p>04277 Leipzig</p>
               <p>Germany</p>
               <br />
-              <p>
-                <b>UID-Number:</b> DE12345678
-              </p>
-              <p>
-                <b>Economic ID:</b> DE123456789
-              </p>
+              <p>{/* <b>UID-Number:</b> DE12345678 */}</p>
+              <p>{/* <b>Economic ID:</b> DE123456789 */}</p>
               <br />
-              <p>Phone: 01234/56789</p>
-              <p>Fax: 01234/56789-0</p>
-              <p>e-mail: office@musterfirma.de</p>
+              <p>Phone: 01520/1326544</p>
+              <p>e-mail: andreas_koeth@gmx.de</p>
               <br />
-              <p>
-                <b>Supervisory authority</b>
-              </p>
-              <p>District administration Musterhausen</p>
-              <p>
-                <b>Website of the supervisory authority</b>
-              </p>
-              <p>https://www.aufsichtsbeoerde-musterhausen.de/</p>
-              <p>
-                <b>Address of the supervisory authority</b>
-              </p>
-              <p>Musterweg 1, 12345 Musterhausen</p>
+              <p>{/* <b>Supervisory authority</b> */}</p>
+              {/* <p>District administration Musterhausen</p> */}
+              <p>{/* <b>Website of the supervisory authority</b> */}</p>
+              {/* <p>https://www.aufsichtsbeoerde-musterhausen.de/</p> */}
+              <p>{/* <b>Address of the supervisory authority</b> */}</p>
+              {/* <p>Musterweg 1, 12345 Musterhausen</p> */}
               <br />
               <p>
                 <b>Job title:</b>
