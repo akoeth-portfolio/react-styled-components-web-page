@@ -112,15 +112,17 @@ function LegalNoticeEnglish() {
               </p>
 
               <br />
-              <h3>Picture credits</h3>
+              <h3>Media credits</h3>
               <br />
               <p>
-                The pictures, photos and graphics on this website are protected
-                by copyright. The image rights are owned by the following
-                photographers and companies:
+                The video in the hero section of this website is taken from
+                https://www.pexels.com/. The illustration in the about section
+                of this website is taken from https://undraw.co/. The fotos in
+                the web shop application featured on this website are taken from
+                https://unsplash.com/ and https://www.dreamstime.com/. All of
+                the afore mentioned media is freely available under a creative
+                commons license.
               </p>
-              <br />
-              <p>• Photographer Mustermann </p>
               <br />
               <p>
                 Source: Created with the AdSimple privacy generator in

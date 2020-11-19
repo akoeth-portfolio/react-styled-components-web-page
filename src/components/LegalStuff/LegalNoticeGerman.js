@@ -116,15 +116,17 @@ const LegalNoticeGerman = () => {
               </p>
 
               <br />
-              <h3>Bildernachweis</h3>
+              <h3>Mediennachweis</h3>
               <br />
               <p>
-                Die Bilder, Fotos und Grafiken auf dieser Webseite sind
-                urheberrechtlich geschützt. Die Bilderrechte liegen bei den
-                folgenden Fotografen und Unternehmen:
+                Das Video in der Hero-Sektion dieser Website stammen von
+                https://www.pexels.com/. Die Abbildung im Abschnitt About dieser
+                Website ist der Website https://undraw.co/ entnommen. Die Fotos
+                in der auf dieser Website enthaltenen Webshop-Anwendung stammen
+                aus https://unsplash.com/ und https://www.dreamstime.com/. Alle
+                genannten Medien sind unter einer Creative Commons Lizenz frei
+                verfügbar.
               </p>
-              <br />
-              <p>• Fotograf Mustermann </p>
               <br />
               <p>
                 Quelle: Erstellt mit dem Datenschutz Generator von AdSimple in
