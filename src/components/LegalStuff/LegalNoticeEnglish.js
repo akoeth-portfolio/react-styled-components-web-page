@@ -110,7 +110,6 @@ function LegalNoticeEnglish() {
                 parts of the contents of our site. If you find content on this
                 website that violates copyright law, please contact us.
               </p>
-
               <br />
               <h3>Media credits</h3>
               <br />

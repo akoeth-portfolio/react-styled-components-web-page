@@ -11,6 +11,7 @@ import {
   SocialIcon,
 } from "./FooterElements";
 import { RiLinkedinBoxFill } from "react-icons/ri";
+import { ImXing } from "react-icons/im";
 
 const Footer = () => {
   return (
@@ -18,9 +19,26 @@ const Footer = () => {
       <FooterContentContainer>
         <SocialContainer>
           <Header>SOCIAL</Header>
-          <SocialIcon>
-            <RiLinkedinBoxFill />
-          </SocialIcon>
+          <div style={{ display: "flex" }}>
+            <SocialIcon>
+              <a
+                id="linked_in_link"
+                href="https://www.linkedin.com/in/andreas-k%C3%B6th-a8b063200/"
+                target="_blank"
+              >
+                <RiLinkedinBoxFill style={{ color: "white" }} />
+              </a>
+            </SocialIcon>
+            <SocialIcon>
+              <a
+                id="xing_link"
+                href="https://www.xing.com/profile/Andreas_Koeth2/cv"
+                target="_blank"
+              >
+                <ImXing style={{ color: "white", paddingLeft: "0.5rem" }} />
+              </a>
+            </SocialIcon>
+          </div>
         </SocialContainer>
         <ContacContainer>
           <Header>CONTACT</Header>
