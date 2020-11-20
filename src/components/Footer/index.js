@@ -34,6 +34,7 @@ const Footer = () => {
                 id="xing_link"
                 href="https://www.xing.com/profile/Andreas_Koeth2/cv"
                 target="_blank"
+                rel="noreferrer"
               >
                 <ImXing style={{ color: "white", paddingLeft: "0.5rem" }} />
               </a>
