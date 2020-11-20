@@ -25,6 +25,7 @@ const Footer = () => {
                 id="linked_in_link"
                 href="https://www.linkedin.com/in/andreas-k%C3%B6th-a8b063200/"
                 target="_blank"
+                rel="noreferrer"
               >
                 <RiLinkedinBoxFill style={{ color: "white" }} />
               </a>
