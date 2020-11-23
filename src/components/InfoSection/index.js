@@ -49,7 +49,9 @@ const InfoSection = ({
 
   const refIframe = useRef(null);
 
-  const refReloadBtn = useRef(null);
+  const [reloadButtonRendered, setReloadButtonRendered] = useState(false);
+
+  // const refReloadBtn = useRef(null);
 
   // Tic tac toe iframe dynamically displays reload button in upper left corner if app has fallen asleep durring mobile screen off
   const sendMessagetoApp = () => {
@@ -61,20 +63,28 @@ const InfoSection = ({
   };
 
   const removeReloadButton = () => {
-    if (refReloadBtn.current)
-      refReloadBtn.current.classList.add("reload-button-display-none");
+    // if (refReloadBtn.current)
+    //   refReloadBtn.current.classList.add("reload-button-display-none");
+    setReloadButtonRendered(false);
   };
 
   window.addEventListener("message", (msg) => {
-    if (refReloadBtn.current && msg.data === "app-sleeps") {
-      refReloadBtn.current.classList.remove("reload-button-display-none");
-      refReloadBtn.current.addEventListener("click", () => {
-        setIframeRendered(false);
-        sendMessagetoApp();
-        removeReloadButton();
-      });
-    }
+    // if (refReloadBtn.current && msg.data === "app-sleeps") {
+    //   refReloadBtn.current.classList.remove("reload-button-display-none");
+    //   refReloadBtn.current.addEventListener("click", () => {
+    //     setIframeRendered(false);
+    //     sendMessagetoApp();
+    //     removeReloadButton();
+    //   });
+    // }
+    if (msg.data === "app-sleeps") setReloadButtonRendered(true);
   });
+
+  const handleReloadButtonClick = () => {
+    setIframeRendered(false);
+    sendMessagetoApp();
+    removeReloadButton();
+  };
 
   const handleOnLoad = () => {
     setIframeRendered(true);
@@ -173,11 +183,12 @@ const InfoSection = ({
                     onLoad={handleOnLoad}
                   />
 
-                  {id === "tic_tac_toe" && (
+                  {id === "tic_tac_toe" && reloadButtonRendered && (
                     <ReloadBtn
                       id="reload_btn"
-                      className="reload-button-display-none"
-                      ref={refReloadBtn}
+                      // className="reload-button-display-none"
+                      // ref={refReloadBtn}
+                      onClick={handleReloadButtonClick}
                     >
                       <AiOutlineReload />
                     </ReloadBtn>
