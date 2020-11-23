@@ -57,10 +57,6 @@ export const HeroContent = styled.div`
   flex-direction: column;
   align-items: center;
 
-  /* @media screen and (min-width: 550px) {
-    top: 4rem;
-  } */
-
   @media only screen and (min-width: 550px) and (max-width: 599px) {
     top: 4rem;
   }
@@ -70,7 +66,7 @@ export const HeroContent = styled.div`
   }
 
   @media screen and (min-width: 1200px) {
-    top: 10rem;
+    top: 15rem;
   }
 `;
 
@@ -109,6 +105,10 @@ export const HeroBtnWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 10rem;
+  }
 `;
 
 export const ArrowForward = styled(MdArrowForward)`

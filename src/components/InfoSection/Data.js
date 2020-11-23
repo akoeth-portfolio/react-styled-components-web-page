@@ -13,7 +13,7 @@ export const homeObjOne = {
   topLine: "About Me",
   headLine: "",
   description:
-    "Hi, I'm Andreas. A geologist turned full stack web developer, I am fully immersed in building web applications. This webpage showcases some of my projects. My main focus is javascript and the MERN stack. Recently I've developed an interest in distributed apps (dapps) and in writing smart contracts with solidity on the ethereum blockchain. I never stop learning and building and every new project is a much welcome challenge to be tackeled with enthusiasm and in a goal-driven and target-oriented fashion.",
+    "Hi, I'm Andreas. A geologist turned full stack web developer, I am fully immersed in building web applications. This webpage showcases some of my projects. My main focus is JavaScript and the MERN stack. Recently I've developed an interest in distributed apps (dapps) and in writing smart contracts with Solidity on the Ethereum blockchain. I never stop learning and building and every new project is a much welcome challenge to be tackeled with enthusiasm and in a goal-driven and target-oriented fashion.",
   buttonLabel: "Go to projects",
   buttonTarget: "/web_shop",
   imgStart: false,
