@@ -71,6 +71,7 @@ const InfoSection = ({
       refReloadBtn.current.addEventListener("click", () => {
         sendMessagetoApp();
         removeReloadButton();
+        setIframeRendered(false);
       });
     }
   });
@@ -175,7 +176,7 @@ const InfoSection = ({
                   {id === "tic_tac_toe" && (
                     <ReloadBtn
                       id="reload_btn"
-                      className="reload-button-display-none"
+                      // className="reload-button-display-none"
                       ref={refReloadBtn}
                     >
                       <AiOutlineReload />
