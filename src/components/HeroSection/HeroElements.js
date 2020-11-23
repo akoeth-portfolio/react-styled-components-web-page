@@ -62,10 +62,14 @@ export const HeroContent = styled.div`
   }
 
   @media screen and (min-width: 768px) {
-    top: 6rem;
+    top: 11rem;
   }
 
-  @media screen and (min-width: 1200px) {
+  /* @media screen and (min-width: 1200px) {
+    top: 11rem;
+  } */
+
+  @media screen and (min-width: 1300px) {
     top: 15rem;
   }
 `;
@@ -107,6 +111,10 @@ export const HeroBtnWrapper = styled.div`
   align-items: center;
 
   @media screen and (min-width: 1200px) {
+    margin-top: 8rem;
+  }
+
+  @media screen and (min-width: 1300px) {
     margin-top: 10rem;
   }
 `;
