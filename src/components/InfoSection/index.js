@@ -69,9 +69,9 @@ const InfoSection = ({
     if (refReloadBtn.current && msg.data === "app-sleeps") {
       refReloadBtn.current.classList.remove("reload-button-display-none");
       refReloadBtn.current.addEventListener("click", () => {
+        setIframeRendered(false);
         sendMessagetoApp();
         removeReloadButton();
-        setIframeRendered(false);
       });
     }
   });
