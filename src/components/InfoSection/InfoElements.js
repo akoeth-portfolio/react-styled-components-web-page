@@ -192,14 +192,36 @@ export const Spinner = styled.div`
   background-color: rgba(232, 224, 223, 0.75);
 `;
 
-export const ReloadBtn = styled.button`
+export const ReloadOverlay = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 2 !important;
-  font-size: 4rem;
-  color: white;
+  background-color: rgba(10, 10, 10, 0.5);
+  height: 100%;
+  width: 100%;
+  z-index: 999;
   padding: 0;
-  border: none;
-  background: none;
+  margin: 0;
+  top: 0;
+  left: 0;
+`;
+
+export const ReloadBtn = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(256, 256, 256);
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 25px 40px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: ${({ primary }) => (primary ? "#fff" : "#01BF71")};
+  }
 `;

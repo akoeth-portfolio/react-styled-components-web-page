@@ -20,6 +20,7 @@ import {
   TechStack,
   BtnWrap,
   IframeWrap,
+  ReloadOverlay,
   ReloadBtn,
 } from "./InfoElements";
 
@@ -50,7 +51,7 @@ const InfoSection = ({
   const refIframe = useRef(null);
 
   // Tic tac toe iframe dynamically displays reload button in upper left corner if app has fallen asleep durring mobile screen off
-  const [reloadButtonRendered, setReloadButtonRendered] = useState(true);
+  const [reloadButtonRendered, setReloadButtonRendered] = useState(false);
 
   const sendMessagetoApp = () => {
     if (refIframe.current && refIframe.current.children[0].id === "tic_tac_toe")
@@ -168,15 +169,18 @@ const InfoSection = ({
                     display="initial"
                     position="relative"
                     onLoad={handleOnLoad}
-                  />
+                  ></Iframe>
 
                   {id === "tic_tac_toe" && reloadButtonRendered && (
-                    <ReloadBtn
-                      id="reload_btn"
-                      onClick={handleReloadButtonClick}
-                    >
-                      <AiOutlineReload /> <p>reload app</p>
-                    </ReloadBtn>
+                    <ReloadOverlay id="reload_overlay">
+                      <ReloadBtn
+                        id="reload_btn"
+                        onClick={handleReloadButtonClick}
+                      >
+                        reload app&nbsp;
+                        <AiOutlineReload style={{ fontSize: "2em" }} />
+                      </ReloadBtn>
+                    </ReloadOverlay>
                   )}
                 </div>
                 <BtnWrap id="btn_wrap_mobile">
