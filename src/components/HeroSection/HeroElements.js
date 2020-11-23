@@ -106,7 +106,7 @@ export const HeroBtnWrapper = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media only screen and (min-width: 600px) and (max-width: 700px) {
+  @media only screen and (min-width: 550) and (max-width: 599) {
     margin: 1rem 0;
   }
 
