@@ -11,15 +11,19 @@ import {
   NavLinks,
 } from "./NavbarElements";
 
-const Navbar = ({ toggle, legalStuff, changeLanguage }) => {
-  // if screen is in mobile landscape mode navbar is transparent, disappears on scroll down and reappears on scroll up
+const Navbar = ({ toggle }) => {
+  // if screen is in mobile landscape mode, navbar is transparent and disappears on scroll down and reappears on scroll up
   // on scroll to topmost postion navbar is opaque
   const [renderNavbar, setRenderNavbar] = useState(true);
 
   const [navbarTransparency, setNavbarTransparency] = useState(false);
 
   window.onscroll = function (e) {
-    if (window.screen.width >= 598 && window.screen.width <= 768) {
+    if (
+      window.screen.width >= 598 &&
+      window.screen.width <= 768 &&
+      window.screen.width > window.screen.height
+    ) {
       window.scrollY <= 100
         ? setNavbarTransparency(false)
         : setNavbarTransparency(true);

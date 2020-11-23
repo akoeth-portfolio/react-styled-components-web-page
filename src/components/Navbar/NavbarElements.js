@@ -123,14 +123,10 @@ export const LangContainer = styled.div`
   flex-direction: row;
   align-items: center;
   cursor: pointer;
-  /* margin-right: 1rem; */
   right: 7rem;
   width: 1rem;
   height: 100%;
-
-  /* @media screen and (max-width: 992px) {
-    display: none;
-  } */
+  -webkit-tap-highlight-color: transparent;
 `;
 
 export const LangImg = styled.img`

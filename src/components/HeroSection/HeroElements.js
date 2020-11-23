@@ -57,7 +57,7 @@ export const HeroContent = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media only screen and (min-width: 550px) and (max-width: 699px) {
+  @media only screen and (min-width: 550px) and (max-width: 699px) and (orientation: landscape) {
     top: 4rem;
   }
 
@@ -106,7 +106,7 @@ export const HeroBtnWrapper = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media only screen and (min-width: 550px) and (max-width: 699px) {
+  @media only screen and (min-width: 550px) and (max-width: 699px) and (orientation: landscape) {
     margin: 1rem;
   }
 

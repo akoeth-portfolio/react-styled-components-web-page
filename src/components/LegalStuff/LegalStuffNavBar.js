@@ -25,7 +25,11 @@ const LegalStuffNavBar = ({ changeLanguage }) => {
       <Nav id="nav">
         <NavbarContainer>
           <NavLogo to="/">portfolio</NavLogo>
-          <LangContainer id="lang_container" onClick={changeFlag}>
+          <LangContainer
+            id="lang_container"
+            className="noSelect"
+            onClick={changeFlag}
+          >
             <LangImg src={ukFlag ? LangUKFlag : LangGerFlag} alt="flag" />
             <LangName>&nbsp;{ukFlag ? "English" : "Deutsch"}</LangName>
           </LangContainer>
