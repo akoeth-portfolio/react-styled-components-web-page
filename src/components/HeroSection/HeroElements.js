@@ -65,10 +65,6 @@ export const HeroContent = styled.div`
     top: 11rem;
   }
 
-  /* @media screen and (min-width: 1200px) {
-    top: 11rem;
-  } */
-
   @media screen and (min-width: 1300px) {
     top: 15rem;
   }
@@ -109,6 +105,10 @@ export const HeroBtnWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media only screen and (min-width: 600px) and (max-width: 700px) {
+    margin-top: 1rem;
+  }
 
   @media screen and (min-width: 1200px) {
     margin-top: 8rem;
