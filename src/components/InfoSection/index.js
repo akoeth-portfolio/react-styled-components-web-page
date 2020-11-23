@@ -49,11 +49,9 @@ const InfoSection = ({
 
   const refIframe = useRef(null);
 
-  const [reloadButtonRendered, setReloadButtonRendered] = useState(false);
-
-  // const refReloadBtn = useRef(null);
-
   // Tic tac toe iframe dynamically displays reload button in upper left corner if app has fallen asleep durring mobile screen off
+  const [reloadButtonRendered, setReloadButtonRendered] = useState(true);
+
   const sendMessagetoApp = () => {
     if (refIframe.current && refIframe.current.children[0].id === "tic_tac_toe")
       refIframe.current.children[0].contentWindow.postMessage(
@@ -63,20 +61,10 @@ const InfoSection = ({
   };
 
   const removeReloadButton = () => {
-    // if (refReloadBtn.current)
-    //   refReloadBtn.current.classList.add("reload-button-display-none");
     setReloadButtonRendered(false);
   };
 
   window.addEventListener("message", (msg) => {
-    // if (refReloadBtn.current && msg.data === "app-sleeps") {
-    //   refReloadBtn.current.classList.remove("reload-button-display-none");
-    //   refReloadBtn.current.addEventListener("click", () => {
-    //     setIframeRendered(false);
-    //     sendMessagetoApp();
-    //     removeReloadButton();
-    //   });
-    // }
     if (msg.data === "app-sleeps") setReloadButtonRendered(true);
   });
 
@@ -88,9 +76,8 @@ const InfoSection = ({
 
   const handleOnLoad = () => {
     setIframeRendered(true);
-    // useRef hook grabs parent element of iframe (can not grab iframe directly bc I don't know why)
-    // access child element (i.e. iframe) by current.children[1]
-    // send message to iframe content (webshop) so it hides scroll bars
+
+    // sends a message to web shop app so scroll bars are beeing removed when app is being displayed in iframe
     if (refIframe.current && refIframe.current.children[0].id === "web_shop")
       refIframe.current.children[0].contentWindow.postMessage("iframe", "*");
   };
@@ -186,11 +173,9 @@ const InfoSection = ({
                   {id === "tic_tac_toe" && reloadButtonRendered && (
                     <ReloadBtn
                       id="reload_btn"
-                      // className="reload-button-display-none"
-                      // ref={refReloadBtn}
                       onClick={handleReloadButtonClick}
                     >
-                      <AiOutlineReload />
+                      <AiOutlineReload /> <p>reload app</p>
                     </ReloadBtn>
                   )}
                 </div>

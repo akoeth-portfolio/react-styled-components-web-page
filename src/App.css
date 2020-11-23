@@ -59,6 +59,11 @@
 }
 
 /* @components/InfoSection/InfoElements.js */
-.reload-button-display-none {
-  display: none;
+#reload_btn:active {
+  color: red;
+}
+
+#reload_btn > p {
+  font-size: 0.25em;
+  margin-left: 0.5rem;
 }
