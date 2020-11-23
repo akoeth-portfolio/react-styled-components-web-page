@@ -107,7 +107,7 @@ export const HeroBtnWrapper = styled.div`
   align-items: center;
 
   @media only screen and (min-width: 600px) and (max-width: 700px) {
-    margin-top: 1rem;
+    margin: 1rem 0;
   }
 
   @media screen and (min-width: 1200px) {
