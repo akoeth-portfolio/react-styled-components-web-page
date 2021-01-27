@@ -144,7 +144,7 @@ export const homeObj6 = {
   },
   buttonLabel: "open in tab",
   buttonExternalTarget: "https://blockchain-demo-app.herokuapp.com/",
-  imgStart: false,
+  imgStart: true,
   url: "https://blockchain-demo-app.herokuapp.com/",
   dark: true,
   primary: true,
