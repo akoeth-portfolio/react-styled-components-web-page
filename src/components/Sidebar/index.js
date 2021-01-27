@@ -26,6 +26,11 @@ const SidebarElements = ({ isOpen, toggle }) => {
           </SidebarLink>
         </SidebarMenu>
         <SidebarMenu>
+          <SidebarLink to="crypto_portfolio_viewer" onClick={toggle}>
+            Crypto Viewer
+          </SidebarLink>
+        </SidebarMenu>
+        <SidebarMenu>
           <SidebarLink to="sliding_puzzle" onClick={toggle}>
             Sliding Puzzle
           </SidebarLink>

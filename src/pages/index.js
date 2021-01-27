@@ -8,12 +8,13 @@ import ContactSection from "../components/ContactSection";
 import Sidebar from "../components/Sidebar";
 
 import {
-  homeObjOne,
-  homeObjTwo,
-  homeObjThree,
-  homeObjFour,
-  homeObjFive,
-  homeObjSix,
+  homeObj1,
+  homeObj2,
+  homeObj3,
+  homeObj4,
+  homeObj5,
+  homeObj6,
+  homeObj7,
 } from "../components/InfoSection/Data";
 
 import Footer from "../components/Footer";
@@ -30,12 +31,13 @@ const Home = () => {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <HeroSection />
-      <AboutSection {...homeObjOne} />
-      <InfoSection {...homeObjTwo} />
-      <InfoSection {...homeObjThree} />
-      <InfoSection {...homeObjFour} />
-      <InfoSection {...homeObjFive} />
-      <ContactSection {...homeObjSix} />
+      <AboutSection {...homeObj1} />
+      <InfoSection {...homeObj2} />
+      <InfoSection {...homeObj3} />
+      <InfoSection {...homeObj4} />
+      <InfoSection {...homeObj5} />
+      <InfoSection {...homeObj6} />
+      <ContactSection {...homeObj7} />
       <Footer />
     </>
   );

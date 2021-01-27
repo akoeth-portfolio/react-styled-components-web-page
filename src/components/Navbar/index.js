@@ -89,14 +89,14 @@ const Navbar = ({ toggle }) => {
               </NavItem>
               <NavItem>
                 <NavLinks
-                  to="sliding_puzzle"
+                  to="crypto_portfolio_viewer"
                   smooth={true}
                   duration={500}
                   spy={true}
                   exact="true"
                   offset={scrollOffset}
                 >
-                  Sliding Puzzle
+                  Crypto Viewer
                 </NavLinks>
               </NavItem>
               <NavItem>
@@ -109,6 +109,18 @@ const Navbar = ({ toggle }) => {
                   offset={scrollOffset}
                 >
                   Tic Tac Toe
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks
+                  to="sliding_puzzle"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={scrollOffset}
+                >
+                  Sliding Puzzle
                 </NavLinks>
               </NavItem>
               <NavItem>

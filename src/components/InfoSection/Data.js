@@ -1,10 +1,11 @@
 import { FaReact } from "react-icons/fa";
 import { SiRedux } from "react-icons/si";
+import { AiOutlineLineChart } from "react-icons/ai";
 import { FaNodeJs } from "react-icons/fa";
 import { DiMongodb } from "react-icons/di";
 import { SiSocketDotIo } from "react-icons/si";
 
-export const homeObjOne = {
+export const homeObj1 = {
   id: "about_me",
   className: "about_me_class",
   lightBg: true,
@@ -24,7 +25,7 @@ export const homeObjOne = {
   darkText: true,
 };
 
-export const homeObjTwo = {
+export const homeObj2 = {
   id: "web_shop",
   className: "web_shop_class",
   lightBg: false,
@@ -51,30 +52,34 @@ export const homeObjTwo = {
   darkText: false,
 };
 
-export const homeObjThree = {
-  id: "sliding_puzzle",
-  className: "sliding_puzzle_class",
+export const homeObj3 = {
+  id: "crypto_portfolio_viewer",
+  className: "crypto_portfolio_viewer_class",
   lightBg: true,
   lightText: false,
   lightTextDesc: false,
   topLine: "Project No 2",
-  headLine: "Sliding Puzzle",
+  headLine: "Crypto Portfolio Viewer",
   description:
-    "This little application challenges its users to slide each piece of the puzzle back in the correct position. Players can choose between numbers or a selection of images.",
+    "This app is for crypto hodlers. It keeps track of the value of a cryptocurrency portfolio. At a glance users can see initial value, current value, profit and ROI of their crypto investment in total and for individual currencies. A diverse array of charts visualizes how these parameters develop over time. Explore the example portfolio or create your own and see how it evolves!",
   teckStackHeader: "Frameworks and Libraries:",
   teckStack: {
     React: <FaReact />,
+    Cart_js: <AiOutlineLineChart />,
+    Node: <FaNodeJs />,
+    Express: "ex",
+    MongoDB: <DiMongodb />,
   },
-  buttonLabel: "see the code on github",
-  buttonExternalTarget: "https://github.com/akoeth-portfolio/sliding-puzzle",
+  buttonLabel: "open in tab",
+  buttonExternalTarget: "https://cryptocurrency-portfolio-view.herokuapp.com/",
   imgStart: false,
-  url: "https://puzzle-react.herokuapp.com/",
+  url: "https://cryptocurrency-portfolio-view.herokuapp.com/",
   dark: false,
   primary: false,
   darkText: true,
 };
 
-export const homeObjFour = {
+export const homeObj4 = {
   id: "tic_tac_toe",
   className: "tic_tac_toe_class",
   lightBg: false,
@@ -100,13 +105,36 @@ export const homeObjFour = {
   darkText: false,
 };
 
-export const homeObjFive = {
-  id: "blockchain",
-  className: "blockchain_class",
+export const homeObj5 = {
+  id: "sliding_puzzle",
+  className: "sliding_puzzle_class",
   lightBg: true,
   lightText: false,
   lightTextDesc: false,
   topLine: "Project No 4",
+  headLine: "Sliding Puzzle",
+  description:
+    "This little application challenges its users to slide each piece of the puzzle back in the correct position. Players can choose between numbers or a selection of images.",
+  teckStackHeader: "Frameworks and Libraries:",
+  teckStack: {
+    React: <FaReact />,
+  },
+  buttonLabel: "see the code on github",
+  buttonExternalTarget: "https://github.com/akoeth-portfolio/sliding-puzzle",
+  imgStart: false,
+  url: "https://puzzle-react.herokuapp.com/",
+  dark: false,
+  primary: false,
+  darkText: true,
+};
+
+export const homeObj6 = {
+  id: "blockchain",
+  className: "blockchain_class",
+  lightBg: false,
+  lightText: true,
+  lightTextDesc: true,
+  topLine: "Project No 5",
   headLine: "Blockchain",
   description:
     "This app showcases some of the functionalities a blockchain has. By no means comprehensive, it nonetheless offers a tiny glimpse into the rapidly emerging world of blockchain technology.",
@@ -118,22 +146,22 @@ export const homeObjFive = {
   buttonExternalTarget: "https://blockchain-demo-app.herokuapp.com/",
   imgStart: false,
   url: "https://blockchain-demo-app.herokuapp.com/",
-  dark: false,
-  primary: false,
-  darkText: true,
+  dark: true,
+  primary: true,
+  darkText: false,
 };
 
-export const homeObjSix = {
+export const homeObj7 = {
   id: "contact_form",
   className: "contact_form_class",
-  lightBg: false,
-  lightText: true,
-  lightTextDesc: true,
+  lightBg: true,
+  lightText: false,
+  lightTextDesc: false,
   headLine: "Contact",
   description: "Feel free to send me a message",
   buttonLabel: "Send",
   buttonExternalTarget: "https://blockchain-demo-app.herokuapp.com/",
-  dark: true,
-  primary: true,
-  darkText: false,
+  dark: false,
+  primary: false,
+  darkText: true,
 };
