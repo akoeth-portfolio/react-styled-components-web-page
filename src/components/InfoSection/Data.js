@@ -61,7 +61,7 @@ export const homeObj3 = {
   topLine: "Project No 2",
   headLine: "Crypto Portfolio Viewer",
   description:
-    "This app is for crypto hodlers. It keeps track of the value of a cryptocurrency portfolio. At a glance users can see initial value, current value, profit and ROI of their crypto investment in total and for individual currencies. A diverse array of charts visualizes how these parameters develop over time. Explore the example portfolio or create your own and see how it evolves!",
+    "This app is for crypto hodlers. It keeps track of the value of a cryptocurrency portfolio. At a glance users can see initial value, current value, profit and ROI of their crypto investment in total and for individual currencies. A diverse array of charts visualizes how these parameters develop over time. Explore the example portfolio (email and password set as default in the sign in form) or create your own and see how it evolves!",
   teckStackHeader: "Frameworks and Libraries:",
   teckStack: {
     React: <FaReact />,
