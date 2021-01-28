@@ -81,6 +81,18 @@ const InfoSection = ({
     // sends a message to web shop app so scroll bars are beeing removed when app is being displayed in iframe
     if (refIframe.current && refIframe.current.children[0].id === "web_shop")
       refIframe.current.children[0].contentWindow.postMessage("iframe", "*");
+
+    // sends a message to crypto portfolio app so scroll bars are beeing removed when app is being displayed in iframe
+    if (
+      refIframe.current &&
+      refIframe.current.children[0].id === "crypto_portfolio_viewer"
+    ) {
+      refIframe.current.children[0].contentWindow.postMessage(
+        "iframe_crypto_portfolio_viewer",
+        "*"
+      );
+      console.log("iframe_crypto_message_send");
+    }
   };
 
   let history = useHistory();
