@@ -18,6 +18,7 @@ import {
   Heading,
   TeckStackHeader,
   TechStack,
+  GitHubLink,
   BtnWrap,
   IframeWrap,
   ReloadOverlay,
@@ -41,6 +42,7 @@ const InfoSection = ({
   buttonLabel,
   buttonTarget,
   buttonExternalTarget,
+  gitHubLinkTarget,
   url,
   primary,
   dark,
@@ -136,6 +138,17 @@ const InfoSection = ({
                     </div>
                   ))}
                 </TechStack>
+
+                <GitHubLink
+                  href={gitHubLinkTarget}
+                  target="_blank"
+                  darkText={darkText}
+                >
+                  <FaGithub />
+                  &nbsp;GitHub project repo &nbsp;
+                  <i class="fas fa-external-link-alt"></i>
+                </GitHubLink>
+
                 <BtnWrap id="btn_wrap_desktop">
                   <ButtonLink
                     smooth={true}

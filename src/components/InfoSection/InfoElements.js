@@ -126,13 +126,26 @@ export const TeckStackHeader = styled.p`
 
 export const TechStack = styled.p`
   max-width: 440px;
-
   font-size: 15px;
   line-height: 24px;
   color: ${({ darkText }) => (darkText ? "#000000" : "#fff")};
 
   @media only screen and (min-width: 768px) {
-    margin-bottom: 35px;
+    margin-bottom: 1.5rem;
+  }
+`;
+
+export const GitHubLink = styled.a`
+  display: inline-block;
+  color: ${({ darkText }) => (darkText ? "#000000" : "#fff")};
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  text-decoration: none;
+
+  @media only screen and (min-width: 768px) {
+    margin-top: 0;
+    margin-bottom: 2rem;
   }
 `;
 

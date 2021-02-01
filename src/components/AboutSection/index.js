@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaGithub } from "react-icons/fa";
 
 import {
   InfoContainer,
@@ -13,6 +14,7 @@ import {
   BtnWrap,
   ImgWrap,
   Img,
+  GitHubLink,
 } from "../InfoSection/InfoElements";
 
 import { NavBtn, NavBtnLink } from "../Navbar/NavbarElements";
@@ -27,10 +29,10 @@ const InfoSection = ({
   lightText,
   headLine,
   darkText,
-  description,
   buttonLabel,
   img,
   alt,
+  gitHubLinkTarget,
 }) => {
   const [hover, setHover] = useState(false);
 
@@ -50,7 +52,23 @@ const InfoSection = ({
                   {headLine}
                 </Heading>
                 <Subtitle id="subtitle" darkText={darkText}>
-                  {description}
+                  "Hi, I'm Andreas. A geologist turned full stack web developer,
+                  I am fully immersed in building web applications. This webpage
+                  showcases my work so far. To see the source code feel free to
+                  visit my{" "}
+                  <GitHubLink
+                    href={gitHubLinkTarget}
+                    target="_blank"
+                    darkText={darkText}
+                  >
+                    <FaGithub />
+                    &nbsp;GitHub Repository.
+                  </GitHubLink>{" "}
+                  <br></br>
+                  My main focus is JavaScript and the MERN stack. I never stop
+                  learning and building and every new project is a much welcome
+                  challenge to be tackeled with enthusiasm and in a goal-driven
+                  and target-oriented fashion."
                 </Subtitle>
 
                 <BtnWrap id="about_btn_wrap_desktop">

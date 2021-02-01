@@ -13,8 +13,7 @@ export const homeObj1 = {
   lightTextDesc: false,
   topLine: "About Me",
   headLine: "",
-  description:
-    "Hi, I'm Andreas. A geologist turned full stack web developer, I am fully immersed in building web applications. This webpage showcases some of my projects. My main focus is JavaScript and the MERN stack. Recently I've developed an interest in distributed apps (dapps) and in writing smart contracts with Solidity on the Ethereum blockchain. I never stop learning and building and every new project is a much welcome challenge to be tackeled with enthusiasm and in a goal-driven and target-oriented fashion.",
+  gitHubLinkTarget: "https://github.com/akoeth-portfolio",
   buttonLabel: "Go to projects",
   buttonTarget: "/web_shop",
   imgStart: false,
@@ -43,6 +42,9 @@ export const homeObj2 = {
     Express: "ex",
     MongoDB: <DiMongodb />,
   },
+  gitHubLinkTarget:
+    "https://github.com/akoeth-portfolio/bicycle-example-webshop",
+
   buttonLabel: "open in tab",
   buttonExternalTarget: "https://mern-stack-example-webshop.herokuapp.com/",
   imgStart: true,
@@ -61,7 +63,7 @@ export const homeObj3 = {
   topLine: "Project No 2",
   headLine: "Crypto Portfolio Viewer",
   description:
-    "This app is for crypto hodlers. It keeps track of the value of a cryptocurrency portfolio. At a glance users can see initial value, current value, profit and ROI of their crypto investment in total and for individual currencies. A diverse array of charts visualizes how these parameters develop over time. Explore the example portfolio (email address and password set as default in the sign in form) or create your own and see how it evolves!",
+    "This app is for cryptocurrency hodlers. At a glance users can see what's going on in their crypto portfolio based on prices as provided by the CoinGecko API V3. A diverse array of charts visualizes things. Explore the example portfolio (email address and password set as default in the sign in form) or create your own and see how it evolves!",
   teckStackHeader: "Frameworks and Libraries:",
   teckStack: {
     React: <FaReact />,
@@ -70,6 +72,8 @@ export const homeObj3 = {
     Express: "ex",
     MongoDB: <DiMongodb />,
   },
+  gitHubLinkTarget:
+    "https://github.com/akoeth-portfolio/cryptocurrency-portfolio-viewer",
   buttonLabel: "open in tab",
   buttonExternalTarget: "https://cryptocurrency-portfolio-view.herokuapp.com/",
   imgStart: false,
@@ -96,6 +100,8 @@ export const homeObj4 = {
     Express: "ex",
     "Socket io": <SiSocketDotIo />,
   },
+  gitHubLinkTarget: "https://github.com/akoeth-portfolio/tic-tac-toe",
+
   buttonLabel: "see the code on github",
   buttonExternalTarget: "https://github.com/akoeth-portfolio/tic-tac-toe",
   imgStart: true,
@@ -119,6 +125,7 @@ export const homeObj5 = {
   teckStack: {
     React: <FaReact />,
   },
+  gitHubLinkTarget: "https://github.com/akoeth-portfolio/sliding-puzzle",
   buttonLabel: "see the code on github",
   buttonExternalTarget: "https://github.com/akoeth-portfolio/sliding-puzzle",
   imgStart: false,
@@ -142,6 +149,8 @@ export const homeObj6 = {
   teckStack: {
     React: <FaReact />,
   },
+  gitHubLinkTarget: "#",
+
   buttonLabel: "open in tab",
   buttonExternalTarget: "https://blockchain-demo-app.herokuapp.com/",
   imgStart: true,
