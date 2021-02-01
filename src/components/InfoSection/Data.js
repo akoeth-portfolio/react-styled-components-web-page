@@ -102,8 +102,8 @@ export const homeObj4 = {
   },
   gitHubLinkTarget: "https://github.com/akoeth-portfolio/tic-tac-toe",
 
-  buttonLabel: "see the code on github",
-  buttonExternalTarget: "https://github.com/akoeth-portfolio/tic-tac-toe",
+  buttonLabel: "open in tab",
+  buttonExternalTarget: "https://tic-tac-toe-web-s.herokuapp.com/",
   imgStart: true,
   url: "https://tic-tac-toe-web-s.herokuapp.com/",
   dark: true,
@@ -126,8 +126,8 @@ export const homeObj5 = {
     React: <FaReact />,
   },
   gitHubLinkTarget: "https://github.com/akoeth-portfolio/sliding-puzzle",
-  buttonLabel: "see the code on github",
-  buttonExternalTarget: "https://github.com/akoeth-portfolio/sliding-puzzle",
+  buttonLabel: "open in tab",
+  buttonExternalTarget: "https://puzzle-react.herokuapp.com/",
   imgStart: false,
   url: "https://puzzle-react.herokuapp.com/",
   dark: false,
@@ -149,7 +149,8 @@ export const homeObj6 = {
   teckStack: {
     React: <FaReact />,
   },
-  gitHubLinkTarget: "#",
+  gitHubLinkTarget:
+    "https://github.com/akoeth-portfolio/blockchain-functionality-showcase-app",
 
   buttonLabel: "open in tab",
   buttonExternalTarget: "https://blockchain-demo-app.herokuapp.com/",

@@ -54,7 +54,7 @@ const InfoSection = ({
                 <Subtitle id="subtitle" darkText={darkText}>
                   "Hi, I'm Andreas. A geologist turned full stack web developer,
                   I am fully immersed in building web applications. This webpage
-                  showcases my work so far. To see the source code feel free to
+                  showcases my work so far. To see the code behind my projects
                   visit my{" "}
                   <GitHubLink
                     href={gitHubLinkTarget}

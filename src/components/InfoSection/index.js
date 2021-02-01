@@ -163,10 +163,7 @@ const InfoSection = ({
                   >
                     {" "}
                     {buttonLabel}&nbsp;
-                    {id === "tic_tac_toe" && <FaGithub />}
-                    {id === "sliding_puzzle" && <FaGithub />}
-                    {id === "web_shop" && <ImNewTab />}
-                    {id === "blockchain" && <ImNewTab />}
+                    {<ImNewTab />}
                   </ButtonLink>
                 </BtnWrap>
               </TextWrapper>
