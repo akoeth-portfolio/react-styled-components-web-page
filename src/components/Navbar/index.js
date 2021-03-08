@@ -5,6 +5,7 @@ import {
   Nav,
   NavbarContainer,
   NavLogo,
+  NavLogoImg,
   MobileIcon,
   NavMenu,
   NavItem,
@@ -12,6 +13,9 @@ import {
 } from "./NavbarElements";
 
 const Navbar = ({ toggle }) => {
+  const img = require("../../images/logo-3.png").default;
+  const alt = "logo";
+
   // if screen is in mobile landscape mode, navbar is transparent and disappears on scroll down and reappears on scroll up
   // on scroll to topmost postion navbar is opaque
   const [renderNavbar, setRenderNavbar] = useState(true);
@@ -53,6 +57,7 @@ const Navbar = ({ toggle }) => {
     <>
       {renderNavbar && (
         <Nav id="nav" style={{ opacity: navbarTransparency ? "0.75" : "1" }}>
+          <NavLogoImg src={img} alt={alt}></NavLogoImg>
           <NavbarContainer>
             <NavLogo to="/" onClick={toggleHome}>
               portfolio
