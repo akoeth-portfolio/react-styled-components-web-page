@@ -74,7 +74,7 @@ export const Img = styled.img`
   width: 175%;
   opacity: 7.5%;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1300px) {
     width: 50%;
   }
 
