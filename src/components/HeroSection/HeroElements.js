@@ -51,7 +51,7 @@ export const HeroContent = styled.div`
   top: 10rem;
   z-index: 3;
   max-width: 1200px;
-  position: absolute;
+  /* position: absolute; */
   padding: 8px 24px;
   display: flex;
   flex-direction: column;
@@ -68,6 +68,11 @@ export const HeroContent = styled.div`
   @media screen and (min-width: 1300px) {
     top: 15rem;
   }
+`;
+
+export const Img = styled.img`
+  width: 175%;
+  opacity: 7.5%;
 `;
 
 export const HeroH1 = styled.h1`
@@ -101,22 +106,23 @@ export const HeroP = styled.p`
 `;
 
 export const HeroBtnWrapper = styled.div`
-  margin-top: 32px;
+  position: absolute;
+  /* margin-top: 32px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
 
-  @media only screen and (min-width: 550px) and (max-width: 699px) and (orientation: landscape) {
+  /* @media only screen and (min-width: 550px) and (max-width: 699px) and (orientation: landscape) {
     margin: 1rem;
-  }
+  } */
 
-  @media screen and (min-width: 1200px) {
+  /* @media screen and (min-width: 1200px) {
     margin-top: 8rem;
-  }
+  } */
 
-  @media screen and (min-width: 1300px) {
+  /* @media screen and (min-width: 1300px) {
     margin-top: 10rem;
-  }
+  } */
 `;
 
 export const ArrowForward = styled(MdArrowForward)`

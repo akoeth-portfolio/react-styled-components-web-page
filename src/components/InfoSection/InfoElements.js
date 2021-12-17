@@ -86,7 +86,7 @@ export const TextWrapper = styled.div`
 `;
 
 export const TopLine = styled.div`
-  color: #ffaa00;
+  color: #ff6a00;
   font-size: 16px;
   line-height: 16px;
   font-weight: 700;
@@ -156,6 +156,9 @@ export const BtnWrap = styled.div`
 
 export const ImgWrap = styled.div`
   /* position: relative; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @media only screen and (min-width: 600px) {
     width: 100%;
