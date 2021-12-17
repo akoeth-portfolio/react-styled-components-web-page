@@ -73,6 +73,14 @@ export const HeroContent = styled.div`
 export const Img = styled.img`
   width: 175%;
   opacity: 7.5%;
+
+  @media screen and (max-width: 768px) {
+    width: 150%;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 100%;
+  } ;
 `;
 
 export const HeroH1 = styled.h1`
