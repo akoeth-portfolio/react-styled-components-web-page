@@ -89,8 +89,10 @@ export const Img = styled.img`
   }
 
   @media screen and (max-width: 480px) {
-    width: 130%;
-  } ;
+    top: 10rem;
+    width: 85%;
+    opacity: 0.75;
+  }
 `;
 
 export const HeroH1 = styled.h1`
