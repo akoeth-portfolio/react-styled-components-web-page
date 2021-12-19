@@ -71,8 +71,14 @@ export const HeroContent = styled.div`
 `;
 
 export const Img = styled.img`
-  width: 175%;
-  opacity: 7.5%;
+  width: 45%;
+  opacity: 25%;
+  position: absolute;
+  top: 3.5rem;
+
+  &:hover {
+    opacity: 50%;
+  }
 
   @media screen and (max-width: 1300px) {
     width: 75%;

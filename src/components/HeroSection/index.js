@@ -18,7 +18,7 @@ import {
 
 import { ImgWrap } from "../InfoSection/InfoElements";
 
-const img = require("../../images/logo-4.png").default;
+const img = require("../../images/Logo2_bearb.png").default;
 const alt = "logo";
 
 const HeroSection = () => {

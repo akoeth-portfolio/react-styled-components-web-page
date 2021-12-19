@@ -13,7 +13,7 @@ import {
 } from "./NavbarElements";
 
 const Navbar = ({ toggle }) => {
-  const img = require("../../images/logo-3.png").default;
+  const img = require("../../images/Logo2_bearb.png").default;
   const alt = "logo";
 
   // if screen is in mobile landscape mode, navbar is transparent and disappears on scroll down and reappears on scroll up
