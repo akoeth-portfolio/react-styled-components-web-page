@@ -48,7 +48,7 @@ export const NavLogo = styled(LinkR)`
 `;
 
 export const NavLogoImg = styled.img`
-  width: 3rem;
+  width: 2rem;
 
   /* @media only screen and (max-width: 992px) {
     display: none;
