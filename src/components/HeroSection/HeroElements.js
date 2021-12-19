@@ -48,33 +48,24 @@ export const VideoBg = styled.video`
 `;
 
 export const HeroContent = styled.div`
-  top: 10rem;
-  z-index: 3;
-  max-width: 1200px;
-  /* position: absolute; */
-  padding: 8px 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  //   @media only screen and (min-width: 550px) and (max-width: 699px) and (orientation: landscape) {
+  //     top: 4rem;
+  //   }
 
-  @media only screen and (min-width: 550px) and (max-width: 699px) and (orientation: landscape) {
-    top: 4rem;
-  }
+  //   @media screen and (min-width: 768px) {
+  //     top: 11rem;
+  //   }
 
-  @media screen and (min-width: 768px) {
-    top: 11rem;
-  }
-
-  @media screen and (min-width: 1300px) {
-    top: 15rem;
-  }
+  //   @media screen and (min-width: 1300px) {
+  //     top: 15rem;
+  //   }
 `;
 
 export const Img = styled.img`
   width: 45%;
   opacity: 25%;
   position: absolute;
-  top: 3.5rem;
+  top: 7rem;
 
   &:hover {
     opacity: 50%;
@@ -85,12 +76,16 @@ export const Img = styled.img`
   }
 
   @media screen and (max-width: 768px) {
+    top: 5rem;
     width: 50%;
+    opacity: 0.75;
   }
 
   @media screen and (max-width: 480px) {
-    width: 130%;
-  } ;
+    top: 10rem;
+    width: 85%;
+    opacity: 0.75;
+  }
 `;
 
 export const HeroH1 = styled.h1`
