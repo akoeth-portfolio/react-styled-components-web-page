@@ -38,12 +38,13 @@ export const NavLogo = styled(LinkR)`
   color: #fff;
   /* justify-self: flex-start; */
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   /* margin-left: 24px; */
   font-weight: bold;
   text-decoration: none;
+  padding-left: 0.5rem;
   /* width: 25% !important; */
 `;
 

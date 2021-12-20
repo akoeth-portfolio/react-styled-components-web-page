@@ -13,7 +13,7 @@ import {
 } from "./NavbarElements";
 
 const Navbar = ({ toggle }) => {
-  const img = require("../../images/Logo2_bearb.png").default;
+  const img = require("../../images/Logo_bearb_no_text.png").default;
   const alt = "logo";
 
   // if screen is in mobile landscape mode, navbar is transparent and disappears on scroll down and reappears on scroll up
@@ -57,10 +57,13 @@ const Navbar = ({ toggle }) => {
     <>
       {renderNavbar && (
         <Nav id="nav" style={{ opacity: navbarTransparency ? "0.75" : "1" }}>
-          <NavLogoImg src={img} alt={alt}></NavLogoImg>
+          <NavLogo to="/" onClick={toggleHome}>
+            <NavLogoImg src={img} alt={alt} />
+          </NavLogo>
+
           <NavbarContainer>
             <NavLogo to="/" onClick={toggleHome}>
-              &nbsp;portFolio
+              webDev portFolio
             </NavLogo>
 
             <MobileIcon onClick={toggle}>

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { MdKeyboardArrowRight, MdArrowForward } from "react-icons/md";
+import { Link } from "react-scroll";
 
 export const HeroContainer = styled.div`
   background: #0c0c0c;
@@ -48,6 +49,7 @@ export const VideoBg = styled.video`
 `;
 
 export const HeroContent = styled.div`
+  z-index: 3;
   //   @media only screen and (min-width: 550px) and (max-width: 699px) and (orientation: landscape) {
   //     top: 4rem;
   //   }
@@ -61,14 +63,21 @@ export const HeroContent = styled.div`
   //   }
 `;
 
+export const HeroImageLink = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const Img = styled.img`
   width: 45%;
-  opacity: 25%;
+  opacity: 0.25;
   position: absolute;
   top: 7rem;
+  cursor: pointer;
 
   &:hover {
-    opacity: 50%;
+    opacity: 0.3;
   }
 
   @media screen and (max-width: 1300px) {
