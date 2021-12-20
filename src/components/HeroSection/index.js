@@ -10,11 +10,6 @@ import {
   VideoBg,
   HeroContent,
   Img,
-  HeroH1,
-  HeroP,
-  HeroBtnWrapper,
-  ArrowForward,
-  ArrowRight,
 } from "./HeroElements";
 
 import { ImgWrap } from "../InfoSection/InfoElements";
