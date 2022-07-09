@@ -68,7 +68,7 @@ const InfoSection = ({
                   My main focus is JavaScript and the MERN stack. I never stop
                   learning and building and every new project is a much welcome
                   challenge to be tackeled with enthusiasm and in a goal-driven
-                  and target-oriented fashion."
+                  and target-oriented fashion.
                 </Subtitle>
 
                 <BtnWrap id="about_btn_wrap_desktop">

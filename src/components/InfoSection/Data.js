@@ -92,7 +92,7 @@ export const homeObj4 = {
   topLine: "Project No 3",
   headLine: "Tic Tac Toe Chat",
   description:
-    "A classic implementation of the good old tic tac toe principle, this application enables its users to play against each other while having a little chat.",
+    "A classic implementation of the good old tic tac toe principle, this application enables you to play against a friend while having a little chat.",
   teckStackHeader: "Frameworks and Libraries:",
   teckStack: {
     React: <FaReact />,
@@ -120,7 +120,7 @@ export const homeObj5 = {
   topLine: "Project No 4",
   headLine: "Sliding Puzzle",
   description:
-    "This little application challenges its users to slide each piece of the puzzle back in the correct position. Players can choose between numbers or a selection of images.",
+    "This little application challenges you to slide each piece of the puzzle back in the correct position. You can choose between numbers or a selection of images.",
   teckStackHeader: "Frameworks and Libraries:",
   teckStack: {
     React: <FaReact />,
