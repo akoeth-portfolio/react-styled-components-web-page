@@ -75,9 +75,9 @@ export const homeObj3 = {
   gitHubLinkTarget:
     "https://github.com/akoeth-portfolio/cryptocurrency-portfolio-viewer",
   buttonLabel: "open in tab",
-  buttonExternalTarget: "https://cryptocurrency-portfolio-view.herokuapp.com/",
+  buttonExternalTarget: "https://cryptocurrency-portfolio-viewer.onrender.com/",
   imgStart: false,
-  url: "https://cryptocurrency-portfolio-view.herokuapp.com/",
+  url: "https://cryptocurrency-portfolio-viewer.onrender.com/",
   dark: false,
   primary: false,
   darkText: true,
