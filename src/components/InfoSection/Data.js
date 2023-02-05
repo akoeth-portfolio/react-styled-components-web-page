@@ -46,9 +46,9 @@ export const homeObj2 = {
     "https://github.com/akoeth-portfolio/bicycle-example-webshop",
 
   buttonLabel: "open in tab",
-  buttonExternalTarget: "https://mern-stack-example-webshop.herokuapp.com/",
+  buttonExternalTarget: "https://bicycle-example-webshop.onrender.com",
   imgStart: true,
-  url: "https://mern-stack-example-webshop.herokuapp.com/",
+  url: "https://bicycle-example-webshop.onrender.com",
   dark: true,
   primary: true,
   darkText: false,
