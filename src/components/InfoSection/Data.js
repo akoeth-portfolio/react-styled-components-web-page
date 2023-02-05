@@ -103,9 +103,9 @@ export const homeObj4 = {
   gitHubLinkTarget: "https://github.com/akoeth-portfolio/tic-tac-toe",
 
   buttonLabel: "open in tab",
-  buttonExternalTarget: "https://tic-tac-toe-web-s.herokuapp.com/",
+  buttonExternalTarget: "https://tic-tac-toe-chat-lwq8.onrender.com/",
   imgStart: true,
-  url: "https://tic-tac-toe-web-s.herokuapp.com/",
+  url: "https://tic-tac-toe-chat-lwq8.onrender.com/",
   dark: true,
   primary: true,
   darkText: false,
